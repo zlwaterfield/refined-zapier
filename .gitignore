@@ -1,0 +1,8 @@
+node_modules
+yarn.lock
+distribution/build
+test/web-ext-profile
+!test/web-ext-profile/.gitkeep
+.cache
+.parcel-cache
+.DS_Store

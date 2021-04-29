@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.ai binary
+readme.md merge=union
+source/refined-zapier.css merge=union

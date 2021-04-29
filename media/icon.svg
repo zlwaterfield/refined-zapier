@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo-2</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-2">
+            <path d="M12,0 C5.373,0 0,5.373 0,12 C0,18.627 5.373,24 12,24 C18.627,24 24,18.627 24,12 C24,5.373 18.627,0 12,0 Z" id="Path" fill="#FF4A00" fill-rule="nonzero"></path>
+            <text id="Z" font-family="Lato-Bold, Lato" font-size="11" font-weight="bold" fill="#FFFFFF">
+                <tspan x="6" y="16">Z</tspan>
+            </text>
+            <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="18 12.583 16.25 12.583 16.25 14.333 15.083 14.333 15.083 12.583 13.333 12.583 13.333 11.417 15.083 11.417 15.083 9.667 16.25 9.667 16.25 11.417 18 11.417"></polygon>
+        </g>
+    </g>
+</svg>
