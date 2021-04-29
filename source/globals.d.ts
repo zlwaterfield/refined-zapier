@@ -29,7 +29,7 @@ declare namespace JSX {
 		'clipboard-copy': IntrinsicElements.button & {for?: string};
 		'details-dialog': IntrinsicElements.div & {tabindex: string};
 		'details-menu': IntrinsicElements.div & {src?: string; preload?: boolean};
-		'has-rgh': IntrinsicElements.div;
+		'has-rzp': IntrinsicElements.div;
 		'include-fragment': IntrinsicElements.div & {src?: string};
 		'label': IntrinsicElements.label & {for?: string};
 		'relative-time': IntrinsicElements.div & {datetime: string};

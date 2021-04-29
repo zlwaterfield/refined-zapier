@@ -7,7 +7,7 @@ import {Promisable} from 'type-fest';
 import elementReady from 'element-ready';
 import * as pageDetect from 'github-url-detection';
 
-import optionsStorage, {RGHOptions} from '../options-storage';
+import optionsStorage, {RZPOptions} from '../options-storage';
 
 type BooleanFunction = () => boolean;
 type CallerFunction = (callback: VoidFunction) => void;
@@ -78,18 +78,18 @@ let logError = (id: FeatureID, error: unknown): void => {
 };
 
 // eslint-disable-next-line no-async-promise-executor -- Rule assumes we don't want to leave it pending
-const globalReady: Promise<RGHOptions> = new Promise(async resolve => {
+const globalReady: Promise<RZPOptions> = new Promise(async resolve => {
 	await elementReady('body', {waitForChildren: false});
 
 	// If (document.title === 'Confirm password' || document.title === 'Confirm access') {
 	// 	return;
 	// }
 
-	if (document.body.classList.contains('logged-out')) {
-		console.warn('Refined Zapier is only expected to work when you’re logged in to Zapier. Errors will not be shown.');
-		features.error = () => {/* No logging */};
-		logError = () => {/* No logging */};
-	}
+	// if (document.body.classList.contains('logged-out')) {
+	// 	console.warn('Refined Zapier is only expected to work when you’re logged in to Zapier. Errors will not be shown.');
+	// 	features.error = () => {/* No logging */};
+	// 	logError = () => {/* No logging */};
+	// }
 
 	if (select.exists('html.refined-zapier')) {
 		console.warn(stripIndent(`
@@ -135,7 +135,7 @@ const setupPageLoad = async (id: FeatureID, config: InternalRunConfig): Promise<
 	const runFeature = async (): Promise<void> => {
 		try {
 			// Features can return `false` when they decide not to run on the current page
-			// Also the condition avoids logging the fake feature added for `has-rgh`
+			// Also the condition avoids logging the fake feature added for `has-rzp`
 			if (await init() !== false && id !== __filebasename) {
 				log('✅', id);
 			}
@@ -226,7 +226,7 @@ const add = async (id: FeatureID, ...loaders: FeatureLoader[]): Promise<void> =>
 			init,
 			deinit,
 			awaitDomReady = true,
-			deduplicate = 'has-rgh',
+			deduplicate = 'has-rzp',
 			onlyAdditionalListeners = false,
 			additionalListeners = []
 		} = loader;
@@ -237,9 +237,9 @@ const add = async (id: FeatureID, ...loaders: FeatureLoader[]): Promise<void> =>
 		}
 
 		// 404 pages should only run 404-only features
-		if (pageDetect.is404() && !include.includes(pageDetect.is404)) {
-			continue;
-		}
+		// if (pageDetect.is404() && !include.includes(pageDetect.is404)) {
+		// 	continue;
+		// }
 
 		enforceDefaults(id, include, additionalListeners);
 
@@ -266,7 +266,7 @@ const addCssFeature = async (id: FeatureID, include: BooleanFunction[]): Promise
 		include,
 		awaitDomReady: false,
 		init: () => {
-			document.body.classList.add('rgh-' + id);
+			document.body.classList.add('rzp-' + id);
 		}
 	});
 };
@@ -279,9 +279,9 @@ This marks each as "processed"
 */
 void add(__filebasename, {
 	init: async () => {
-		// `await` kicks it to the next tick, after the other features have checked for 'has-rgh', so they can run once.
+		// `await` kicks it to the next tick, after the other features have checked for 'has-rzp', so they can run once.
 		await Promise.resolve();
-		select('#js-repo-pjax-container, #js-pjax-container')?.append(<has-rgh/>);
+		select('#react-root-app')?.append(<has-rzp/>);
 	}
 });
 

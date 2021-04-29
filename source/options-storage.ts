@@ -1,9 +1,9 @@
 import OptionsSyncPerDomain, {Migration} from 'webext-options-sync-per-domain';
 
-export type RGHOptions = typeof defaults;
+export type RZPOptions = typeof defaults;
 
-function featureWasRenamed(from: string, to: string): Migration<RGHOptions> {
-	return (options: RGHOptions) => {
+function featureWasRenamed(from: string, to: string): Migration<RZPOptions> {
+	return (options: RZPOptions) => {
 		if (typeof options[`feature:${from}`] === 'boolean') {
 			options[`feature:${to}`] = options[`feature:${from}`];
 		}

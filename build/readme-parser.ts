@@ -43,7 +43,7 @@ export function getFeaturesMeta(): FeatureMeta[] {
 	const readmeContent = readFileSync(path.join(__dirname, '../readme.md'), 'utf-8');
 	const features = [];
 	for (const id of getFeatures()) {
-		if (!id.startsWith('rgh-')) {
+		if (!id.startsWith('rzp-')) {
 			const details = searchInList(readmeContent, id) ?? searchInHighlights(readmeContent, id);
 			if (details) {
 				features.push(details);
