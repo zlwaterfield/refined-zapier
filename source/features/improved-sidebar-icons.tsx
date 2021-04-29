@@ -3,6 +3,7 @@ import select from 'select-dom';
 import elementReady from 'element-ready';
 
 import features from '.';
+import { isZaps } from '../helpers/page-detect';
 
 async function init(): Promise<false | void> {
 	await elementReady('[class*=UniversalSidebar__content]', {
@@ -17,5 +18,8 @@ async function init(): Promise<false | void> {
 }
 
 void features.add(__filebasename, {
+  include: [
+    isZaps
+  ],
 	init
 });
