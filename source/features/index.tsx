@@ -5,7 +5,6 @@ import domLoaded from 'dom-loaded';
 import stripIndent from 'strip-indent';
 import {Promisable} from 'type-fest';
 import elementReady from 'element-ready';
-import * as pageDetect from 'github-url-detection';
 
 import optionsStorage, {RZPOptions} from '../options-storage';
 
@@ -52,9 +51,6 @@ let logError = (id: FeatureID, error: unknown): void => {
 		return;
 	}
 
-	// Don't change this to `throw Error` because Firefox doesn't show extensions' errors in the console
-	console.group('❌', id, version, pageDetect.isEnterprise() ? 'GHE →' : '→', error);
-
 	console.group('Search issue');
 	console.log(`https://github.com/zlwaterfield/refined-zapier/issues?q=is%3Aissue+${encodeURIComponent(message)}`);
 	console.groupEnd();
@@ -79,17 +75,7 @@ let logError = (id: FeatureID, error: unknown): void => {
 
 // eslint-disable-next-line no-async-promise-executor -- Rule assumes we don't want to leave it pending
 const globalReady: Promise<RZPOptions> = new Promise(async resolve => {
-	await elementReady('body', {waitForChildren: false});
-
-	// If (document.title === 'Confirm password' || document.title === 'Confirm access') {
-	// 	return;
-	// }
-
-	// if (document.body.classList.contains('logged-out')) {
-	// 	console.warn('Refined Zapier is only expected to work when you’re logged in to Zapier. Errors will not be shown.');
-	// 	features.error = () => {/* No logging */};
-	// 	logError = () => {/* No logging */};
-	// }
+	await elementReady('body', { waitForChildren: false });
 
 	if (select.exists('html.refined-zapier')) {
 		console.warn(stripIndent(`
@@ -235,11 +221,6 @@ const add = async (id: FeatureID, ...loaders: FeatureLoader[]): Promise<void> =>
 		for (const [hotkey, description] of Object.entries(shortcuts)) {
 			shortcutMap.set(hotkey, description);
 		}
-
-		// 404 pages should only run 404-only features
-		// if (pageDetect.is404() && !include.includes(pageDetect.is404)) {
-		// 	continue;
-		// }
 
 		enforceDefaults(id, include, additionalListeners);
 
