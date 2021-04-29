@@ -12,7 +12,7 @@ async function init(): Promise<false | void> {
 
 	const UniversalSidebarContent = select('[class*=UniversalSidebar__content]');
 	select.all('[class*=-Icon--]', UniversalSidebarContent).forEach(element => {
-		element.classList.add('red-icon');
+		element.classList.add('zapier-brand-color');
 	});
 }
 
