@@ -2,12 +2,14 @@ import delegate from 'delegate-it'
 
 import features from '.';
 import { isZapEditor } from '../helpers/page-detect';
-import {onTurnZapOnTooltipEnabled} from '../events/on-tooltip-enabled';
+import {onTurnZapOnToggleSwitchEnabled} from '../events/on-toggle-switch-enabled';
 
 
 function handleZapActivated(event: delegate.Event<MouseEvent>): void {
     if (!isZapNameOk()) {
         console.log("Zap name is not ok. Activation should be prevented.");
+        // TODO: Improve the UX presented here.
+        alert("Please set a zap name to continue.");
         event.stopPropagation();
     }
 }
@@ -20,7 +22,7 @@ function isZapNameOk(): boolean {
 }
 
 async function init(): Promise<false | void> {
-	onTurnZapOnTooltipEnabled(handleZapActivated);
+	onTurnZapOnToggleSwitchEnabled(handleZapActivated);
 }
 
 void features.add(__filebasename, {

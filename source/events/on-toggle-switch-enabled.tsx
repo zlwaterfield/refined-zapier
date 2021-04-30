@@ -2,7 +2,7 @@ import delegate from 'delegate-it'
 
 type DelegateFieldEvent = delegate.EventHandler<MouseEvent, HTMLInputElement>
 
-function onTooltipEnabled(selector: string, callback: DelegateFieldEvent): void {
+function onToggleSwitchEnabled(selector: string, callback: DelegateFieldEvent): void {
     delegate<HTMLInputElement, 'click'>(document, selector, 'click', event => {
         const target = event.delegateTarget;
         if (target instanceof HTMLInputElement) {
@@ -19,6 +19,6 @@ function isCurrentlyUnchecked(element: HTMLInputElement): boolean {
         element.nextElementSibling.className.includes('unchecked');
 }
 
-export function onTurnZapOnTooltipEnabled(callback: DelegateFieldEvent): void {
-	onTooltipEnabled('.css-1jfssyj-ToggleSwitch__input', callback);
+export function onTurnZapOnToggleSwitchEnabled(callback: DelegateFieldEvent): void {
+	onToggleSwitchEnabled('.css-1jfssyj-ToggleSwitch__input', callback);
 }
