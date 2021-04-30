@@ -8,7 +8,7 @@ import {onTurnZapOnTooltipEnabled} from '../events/on-tooltip-enabled';
 function handleZapActivated(event: delegate.Event<MouseEvent>): void {
     if (!isZapNameOk()) {
         console.log("Zap name is not ok. Activation should be prevented.");
-        event.preventDefault();
+        event.stopPropagation();
     }
 }
 
