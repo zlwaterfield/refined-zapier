@@ -42,7 +42,7 @@
 				"newlines-between": "always-and-inside-groups"
 			}
 		],
-		"import/prefer-default-export": "error",
+		"import/prefer-default-export": "off",
 		"react/function-component-definition": [
 			"error",
 			{

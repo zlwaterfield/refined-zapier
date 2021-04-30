@@ -8,7 +8,6 @@ import './refined-zapier.css';
 
 // CSS-only disableable features
 import './features/improved-sidebar-icons';
-
 import './features/disable-submit-without-zap-name';
 
 // Add global for easier debugging
