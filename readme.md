@@ -2,6 +2,8 @@
 
 > The inspiration and base for this project was take from [Refined Github](https://github.com/sindresorhus/refined-github).
 
+Note: this was implemented over a weekend so it is not fully hashed out - there are no tests and the code is inconsistent. If you would like to contribute and help expand the feature-set or improve the code reliability please let us know!
+
 ## Install (coming soon)
 
 [link-chrome]: https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf 'Version published on Chrome Web Store'
@@ -37,9 +39,10 @@ Thanks for contributing! 🦋🙌
 
 ### Repositories
 
-- [](# "load-styles") 🔥 [Load Styles.]()
-- [](# "improved-sidebar") 🔥 [Improve the Zapier sidebar.]()
+- [](# "load-styles") 🎨 Load fonts (Poppings)
+- [](# "improved-sidebar") 🎛 [Improve the Zapier sidebar.]()
 - [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]()
+- [](# "folder-searching") 🔦 [Folder searching.]()
 
 <!-- Refer to style guide above. Keep this message between sections. -->
 
