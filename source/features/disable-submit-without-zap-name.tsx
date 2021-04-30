@@ -2,6 +2,7 @@ import delegate from 'delegate-it'
 
 import features from '.';
 import { isZapEditor } from '../helpers/page-detect';
+import {onTurnZapOnButtonClicked} from '../events/on-button-clicked';
 import {onTurnZapOnToggleSwitchEnabled} from '../events/on-toggle-switch-enabled';
 
 
@@ -23,6 +24,7 @@ function isZapNameOk(): boolean {
 
 async function init(): Promise<false | void> {
 	onTurnZapOnToggleSwitchEnabled(handleZapActivated);
+    onTurnZapOnButtonClicked(handleZapActivated);
 }
 
 void features.add(__filebasename, {
