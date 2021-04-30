@@ -4,7 +4,7 @@ export const isDashboard = (url: URL | HTMLAnchorElement | Location = location):
 
 export const isZaps = (url: URL | HTMLAnchorElement | Location = location): boolean => url.pathname === '/app/zaps' || /\/app\/zaps\/folder\/[0-9]{0,9}/.test(url.pathname);
 
-export const isMayZaps = (url: URL | HTMLAnchorElement | Location = location): boolean => url.pathname === '/app/connections' || /\/app\/zaps\/folder\/[0-9]{0,9}/.test(url.pathname);
+export const isMyZaps = (url: URL | HTMLAnchorElement | Location = location): boolean => url.pathname === '/app/connections' || /\/app\/zaps\/folder\/[0-9]{0,9}/.test(url.pathname);
 
 export const isZapHistory = (url: URL | HTMLAnchorElement | Location = location): boolean => url.pathname === '/app/history/usage';
 
