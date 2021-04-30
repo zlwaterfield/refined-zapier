@@ -1,0 +1,116 @@
+/* Nav links (mobile) */
+nav[class*='UniversalSidebar--constrainedWidth--bordered--collapsed'] a[class*='UniversalNavLink'] {
+	color: #000 !important;
+	background-color: transparent !important;
+	border-radius: 15px !important;
+}
+
+nav[class*='UniversalSidebar--constrainedWidth--bordered--collapsed'] a[class*='UniversalNavLink']:not([class*='UniversalNavLink--selected']):hover {
+	background-color: rgb(37 84 111 / 10%) !important;
+}
+
+nav[class*='UniversalSidebar--constrainedWidth--bordered--collapsed'] a[class*='UniversalNavLink'] > svg {
+	background-color: #000 !important;
+}
+
+nav[class*='UniversalSidebar--constrainedWidth--bordered--collapsed'] a[class*='UniversalNavLink--selected'] {
+	color: #fff !important;
+	background-color: #000 !important;
+}
+
+nav[class*='UniversalSidebar--constrainedWidth--bordered--collapsed'] a[class*='UniversalNavLink--selected'] > svg {
+	background-color: #fff !important;
+}
+
+nav[class*='UniversalSidebar--constrainedWidth--bordered--collapsed'] div[class*='UniversalSidebar__header'] > a[aria-label='Make a Zap'] {
+	background-color: #0062ff !important;
+	color: #fff !important;
+	font-weight: 500 !important;
+}
+
+/* Nav links (desktop) */
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) a[class*='UniversalNavLink'] {
+	font-family: Poppins, sans-serif !important;
+	color: #000 !important;
+	background-color: transparent !important;
+	padding: 15px 25px !important;
+	border-radius: 15px !important;
+}
+
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) a[class*='UniversalNavLink'] > svg {
+	background-color: #000 !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) div[class*='UniversalNavLink__layout'] {
+	gap: 30px !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) a[class*='UniversalNavLink--selected'] {
+	color: #fff !important;
+	background-color: #000 !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) a[class*='UniversalNavLink--selected'] > svg {
+	background-color: #fff !important;
+}
+
+/* Nav structure (header, content, footer) */
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) div[class*='UniversalSidebar__content'] {
+	padding: 15px 30px !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) div[class*='UniversalSidebar__header'] {
+	padding: 20px 30px 0 !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) div[class*='UniversalSidebar__footer'] {
+	border-top: none !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) div[class*='UniversalSidebar__header'] > a[aria-label='Make a Zap'] {
+	font-family: Poppins, sans-serif !important;
+	background-color: #0062ff !important;
+	color: #fff !important;
+	font-weight: 500 !important;
+}
+
+/* Plan details */
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) span[class*='-Icon--miscWallet'] {
+	display: none !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) h3[class*='UniversalSidebarUsage__planName'] {
+	font-family: Poppins, sans-serif !important;
+	font-weight: 600 !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) figure[class*='UsageBar'] {
+	margin-bottom: 10px !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) span[class*='UsageBar__label'] {
+	font-family: Poppins, sans-serif !important;
+	font-weight: 500 !important;
+	color: rgb(37 84 111 / 50%) !important;
+	font-size: 15px !important;
+	text-transform: none !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) span[class*='UsageBar__amounts'] {
+	font-family: Poppins, sans-serif !important;
+	font-weight: 500 !important;
+	font-size: 12px !important;
+	color: rgb(37 84 111 / 50%) !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) div[class*='ProgressBar__progress'] {
+	height: 8px !important;
+	border-radius: 10px !important;
+}
+
+nav:not([class*='UniversalSidebar--constrainedWidth--bordered--collapsed']) div[class*='UniversalSidebarUsage__resetInfo'] {
+	font-family: Poppins, sans-serif !important;
+	font-weight: 500 !important;
+	color: rgb(37 84 111 / 50%) !important;
+}

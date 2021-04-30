@@ -37,7 +37,8 @@ Thanks for contributing! 🦋🙌
 
 ### Repositories
 
-- [](# "improved-sidebar-icons") 🔥 [Improve the Zapier sidebar icons.]()
+- [](# "load-styles") 🔥 [Load Styles.]()
+- [](# "improved-sidebar") 🔥 [Improve the Zapier sidebar.]()
 - [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]()
 
 <!-- Refer to style guide above. Keep this message between sections. -->
