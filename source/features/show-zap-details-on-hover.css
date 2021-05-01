@@ -1,0 +1,23 @@
+.zap-mini.dashboard {
+	position: relative !important;
+}
+
+.icon-tooltip {
+	position: absolute;
+	padding: 10px 15px !important;
+	list-style-type: disc !important;
+	list-style-position: inside !important;
+	top: 100% !important;
+	left: 10px !important;
+	width: 200px !important;
+	height: auto !important;
+	overflow: hidden !important;
+	background-color: #fff !important;
+	border-radius: 10px !important;
+	z-index: 10 !important;
+	box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%) !important;
+}
+
+.icon-tooltip.hide-tooltip {
+	display: none !important;
+}
