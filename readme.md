@@ -2,13 +2,9 @@
 
 > The inspiration and base for this project was take from [Refined Github](https://github.com/sindresorhus/refined-github).
 
-Note: this was implemented over a weekend so it is not fully hashed out - there are no tests and the code is inconsistent. If you would like to contribute and help expand the feature-set or improve the code reliability please let us know!
-
 ## Install (coming soon)
 
-[link-chrome]: https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf 'Version published on Chrome Web Store'
-
-[<img src="https://raw.githubusercontent.com/alrra/browser-logos/90fdf03c/src/chrome/chrome.svg" width="48" alt="Chrome" valign="middle">][link-chrome] [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/hlepfoohegkhhmjieoechaddaejaokhf.svg?label=%20">][link-chrome] also compatible with [<img src="https://raw.githubusercontent.com/alrra/browser-logos/90fdf03c/src/edge/edge.svg" width="24" alt="Edge" valign="middle">][link-chrome] [<img src="https://raw.githubusercontent.com/alrra/browser-logos/90fdf03c/src/opera/opera.svg" width="24" alt="Opera" valign="middle">][link-chrome]
+[link-chrome]: https://chrome.google.com/webstore/detail/ 'Version published on Chrome Web Store'
 
 <!--
 
@@ -38,16 +34,16 @@ Thanks for contributing! 🦋🙌
 -->
 
 ### Zap List
-- [](# "folder-searching") 🔦 [Folder searching.]()
-- [](# "show-zap-details-on-hover") 🔍 [Details on hover.]()
+- [](# "folder-searching") 🔦  [Folder searching.]()
+- [](# "show-zap-details-on-hover") 🔍  [Details on hover.]()
 
 ### Zap Editor
-- [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]()
+- [](# "disable-submit-without-zap-name") ✋  [Prevent creating Zaps with no name.]()
 
 ### Styling
 - [](# "load-styles") 🎨 Load fonts (Poppins)
-- [](# "improved-sidebar-styling") 🎛 [Improve the styling of Zapier sidebar.]()
-- [](# "improved-zap-list-styling") 🎛 [Improve the styling of the Zap list.]()
+- [](# "improved-sidebar-styling") 🎛  [Improve the styling of Zapier sidebar.]()
+- [](# "improved-zap-list-styling") 🎛  [Improve the styling of the Zap list.]()
 
 <!-- Refer to style guide above. Keep this message between sections. -->
 
