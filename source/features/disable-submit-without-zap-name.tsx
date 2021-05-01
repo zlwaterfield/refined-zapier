@@ -1,7 +1,7 @@
-import delegate from 'delegate-it'
+import delegate from 'delegate-it';
 
 import features from '.';
-import { isZapEditor } from '../helpers/page-detect';
+import {isZapEditor} from '../helpers/page-detect';
 import {onTurnZapOnButtonClicked} from '../events/on-button-clicked';
 import {onTurnZapOnToggleSwitchEnabled} from '../events/on-toggle-switch-enabled';
 
@@ -31,5 +31,5 @@ void features.add(__filebasename, {
   include: [
     isZapEditor
   ],
-	init
+  init
 });

@@ -37,11 +37,12 @@ Thanks for contributing! 🦋🙌
 
 -->
 
-### Blue Chip Features
+### Zap List
 - [](# "folder-searching") 🔦 [Folder searching.]()
+- [](# "show-zap-details-on-hover") 🔍 [Details on hover.]()
 
 ### Zap Editor
-- [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]()
+- [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]() [WIP]
 
 ### Styling
 - [](# "load-styles") 🎨 Load fonts (Poppins)

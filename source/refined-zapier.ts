@@ -12,6 +12,7 @@ import './features/disable-submit-without-zap-name';
 import './features/improved-sidebar-styling';
 import './features/improved-zap-list-styling';
 import './features/folder-searching';
+import './features/show-zap-details-on-hover';
 
 // Add global for easier debugging
 (window as any).select = select;
