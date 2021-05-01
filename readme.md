@@ -40,7 +40,7 @@ Thanks for contributing! 🦋🙌
 ### Blue Chip Features
 - [](# "folder-searching") 🔦 [Folder searching.]()
 
-# Zap Editor
+### Zap Editor
 - [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]()
 
 ### Styling
