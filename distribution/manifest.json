@@ -7,9 +7,7 @@
 	"minimum_chrome_version": "88",
 	"permissions": [
 		"storage",
-		"contextMenus",
 		"activeTab",
-		"alarms",
 		"https://zapier.com/*"
 	],
 	"browser_action": {
