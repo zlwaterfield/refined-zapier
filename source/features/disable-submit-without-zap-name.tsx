@@ -4,27 +4,19 @@ import features from '.';
 import {isZapEditor} from '../helpers/page-detect';
 import {onTurnZapOnButtonClicked} from '../events/on-button-clicked';
 import {onTurnZapOnToggleSwitchEnabled} from '../events/on-toggle-switch-enabled';
-
+import { isZapNameSet } from '../helpers/is-zap-name-set';
 
 function handleZapActivated(event: delegate.Event<MouseEvent>): void {
-    if (!isZapNameOk()) {
-        console.log("Zap name is not ok. Activation should be prevented.");
-        // TODO: Improve the UX presented here.
-        alert("Please set a zap name to continue.");
-        event.stopPropagation();
-    }
-}
-
-function isZapNameOk(): boolean {
-    const heading = document.querySelector('h1, .generic-heading')
-    if (heading === null) return false;
-    const zapName = heading.textContent;
-    return zapName !== null && zapName.length > 0 && zapName !== 'Name your zap';
+	if (!isZapNameSet()) {
+		// TODO: Improve the UX presented here.
+		alert("Please set a zap name to continue.");
+		event.stopPropagation();
+	}
 }
 
 async function init(): Promise<false | void> {
 	onTurnZapOnToggleSwitchEnabled(handleZapActivated);
-    onTurnZapOnButtonClicked(handleZapActivated);
+	onTurnZapOnButtonClicked(handleZapActivated);
 }
 
 void features.add(__filebasename, {
