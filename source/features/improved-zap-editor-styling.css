@@ -1,3 +1,4 @@
+
 .flow-container__editor {
     background-color: white;
 }
@@ -14,14 +15,31 @@ div[class*='flow-sidebar__beta-timeline']{
 
 
 div[class*='flow-detail-steps']{
+    font-family: Poppins, sans-serif !important;
     padding-right: 25px;
     padding-left: 25px;
     position: relative;
     width: 100%;
 }
 
+
 div[class*='css-wra4y2'] {
     background-color: white;
 } 
 
 
+/* Not solved */
+div[class*='flow-container__app-bar'] > button[aria-label="share this zap"] {
+    background-color: black !important;
+}
+
+.button[aria-label="share this zap"]{
+    background-color: black;
+}
+
+div[class*='flow-detail-steps'] > span[class*="Text--subtitle800--black"]{
+    font-family: Poppins, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 25px  !important;
+} 
