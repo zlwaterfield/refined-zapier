@@ -37,12 +37,16 @@ Thanks for contributing! 🦋🙌
 
 -->
 
-### Repositories
-
-- [](# "load-styles") 🎨 Load fonts (Poppings)
-- [](# "improved-sidebar") 🎛 [Improve the Zapier sidebar.]()
-- [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]()
+### Blue Chip Features
 - [](# "folder-searching") 🔦 [Folder searching.]()
+
+# Zap Editor
+- [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]()
+
+### Styling
+- [](# "load-styles") 🎨 Load fonts (Poppins)
+- [](# "improved-sidebar-styling") 🎛 [Improve the styling of Zapier sidebar.]()
+- [](# "improved-zap-list-styling") 🎛 [Improve the styling of the Zap list.]()
 
 <!-- Refer to style guide above. Keep this message between sections. -->
 
