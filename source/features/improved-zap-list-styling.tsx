@@ -22,7 +22,7 @@ async function init(): Promise<false | void> {
 	const zapListHeader = select('.zap-list-header');
 	const filterZapsInput = document.querySelector('input[aria-label="Filter Zaps…"]');
 	if (filterZapsInput?.parentElement) {
-		zapListHeader!.parentElement?.before(filterZapsInput.parentElement);
+		zapListHeader!.parentElement?.parentElement?.before(filterZapsInput.parentElement);
 	}
 }
 
