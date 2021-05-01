@@ -5,8 +5,6 @@
 Note: this was implemented over a weekend so it is not fully hashed out - there are no tests and the code is inconsistent. If you would like to contribute and help expand the feature-set or improve the code reliability please let us know!
 
 ## Install (coming soon)
-
-## Install (coming soon)
 ```sh
 # Install dependencies
 yarn  
