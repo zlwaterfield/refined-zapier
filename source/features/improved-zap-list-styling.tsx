@@ -19,10 +19,10 @@ async function init(): Promise<false | void> {
 		<section data-css-reset="true" className="zap-search-section"/>
 	);
 
-	const zapListHeader = select('.zap-list-header');
+	const zapListWrapper = select('[class*="ZapsListingPage--contentStyle"]');
 	const filterZapsInput = document.querySelector('input[aria-label="Filter Zaps…"]');
 	if (filterZapsInput?.parentElement) {
-		zapListHeader!.parentElement?.parentElement?.before(filterZapsInput.parentElement);
+		zapListWrapper?.firstChild?.before(filterZapsInput.parentElement);
 	}
 }
 
