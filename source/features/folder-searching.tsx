@@ -46,9 +46,10 @@ async function init(): Promise<false | void> {
 
 	onFolderSearchChange(handleInputChange);
 
-	const filterZapsInput = select('.search-box');
-	filterZapsInput!.after(
-		<div className="search-box">
+	const filterZapsInputWrapper = select('.search-box');
+  filterZapsInputWrapper?.classList.add('zap-search');
+	filterZapsInputWrapper!.after(
+		<div className="search-box folder-search">
 			<span className="search-box__icon search-box__icon--before">
 				<span className="svg-icon svg-icon--search search-box__search-icon">
 					<svg viewBox="0 0 512 512">
@@ -64,7 +65,7 @@ async function init(): Promise<false | void> {
 			/>
 		</div>
 	);
-	filterZapsInput?.parentElement?.classList.add('zap-listings-with-folder-search');
+	filterZapsInputWrapper?.parentElement?.classList.add('zap-listings-with-folder-search');
 }
 
 void features.add(__filebasename, {

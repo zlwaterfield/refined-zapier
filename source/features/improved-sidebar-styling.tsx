@@ -1,5 +1,4 @@
-import './improved-sidebar.css';
-
+import './improved-sidebar-styling.css';
 import features from '.';
 import {isDashboard, isMyZaps, isZapHistory, isZaps} from '../helpers/page-detect';
 
