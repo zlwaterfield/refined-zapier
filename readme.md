@@ -48,6 +48,8 @@ Thanks for contributing! 🦋🙌
 - [](# "load-styles") 🎨 Load fonts (Poppins)
 - [](# "improved-sidebar-styling") 🎛 [Improve the styling of Zapier sidebar.]()
 - [](# "improved-zap-list-styling") 🎛 [Improve the styling of the Zap list.]()
+- [](# "improved-zap-editor-styling") 🎛 [Improve the styling of the Zap Editor]()
+
 
 <!-- Refer to style guide above. Keep this message between sections. -->
 

@@ -13,6 +13,7 @@ import './features/improved-sidebar-styling';
 import './features/improved-zap-list-styling';
 import './features/folder-searching';
 import './features/show-zap-details-on-hover';
+import './features/improved-zap-editor-styling';
 
 // Add global for easier debugging
 (window as any).select = select;

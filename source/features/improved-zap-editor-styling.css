@@ -1,0 +1,27 @@
+.flow-container__editor {
+    background-color: white;
+}
+
+div[class*='flow-sidebar__beta-timeline']{
+    width: 1000px;
+    margin: 0 auto;
+    border: 2px solid #E3E9ED;
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}  
+
+
+div[class*='flow-detail-steps']{
+    padding-right: 25px;
+    padding-left: 25px;
+    position: relative;
+    width: 100%;
+}
+
+div[class*='css-wra4y2'] {
+    background-color: white;
+} 
+
+
