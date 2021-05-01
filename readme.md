@@ -42,7 +42,7 @@ Thanks for contributing! 🦋🙌
 - [](# "show-zap-details-on-hover") 🔍 [Details on hover.]()
 
 ### Zap Editor
-- [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]() [WIP]
+- [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]()
 
 ### Styling
 - [](# "load-styles") 🎨 Load fonts (Poppins)

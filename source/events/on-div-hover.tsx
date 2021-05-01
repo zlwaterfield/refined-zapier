@@ -12,5 +12,5 @@ function onDivHover(selector: string, callback: DelegateFieldEvent): void {
 }
 
 export function onDashboardZapHover(callback: DelegateFieldEvent): void {
-	onDivHover('.zap-mini.dashboard', callback);
+	onDivHover('.zap-icons', callback);
 }
