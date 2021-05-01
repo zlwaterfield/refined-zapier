@@ -43,6 +43,7 @@ Thanks for contributing! 🦋🙌
 - [](# "improved-sidebar") 🎛 [Improve the Zapier sidebar.]()
 - [](# "disable-submit-without-zap-name") ✋ [Prevent creating Zaps with no name.]()
 - [](# "folder-searching") 🔦 [Folder searching.]()
+- [](# "show-zap-details-on-hover") 🔍 [Details on hover.]()
 
 <!-- Refer to style guide above. Keep this message between sections. -->
 
