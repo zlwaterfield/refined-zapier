@@ -6,9 +6,10 @@
 
 ## Chrome
 
-1. [Download Chrome Extension Zip](https://github.com/zlwaterfield/refined-zapier/releases/download/0.0.1/refined-zapier-0.0.1.zip)
+1. [Download Chrome Extension Zip](https://github.com/zlwaterfield/refined-zapier/releases/latest/download/refined-zapier.zip)
+2. Unzip the release
 2. Open the "Extensions" page (chrome://extensions/) in the browser and turn on the "Developer mode".
-3. In Settings > Extensions click "Load unpacked extension" and select the `distribution/` subfolder of this repository.
+3. In Settings > Extensions click "Load unpacked extension" and select the `refined-zapier/` subfolder of this repository.
 <table>
 	<tr>
 		<th width="100%">
@@ -20,7 +21,7 @@
 <table>
 	<tr>
 		<th width="50%">
-			<p><a title="Improve Zapier UX by 10x"></a> Improve Zapier UX by 10x 
+			<p><a title="Improve Zapier UX by 10x"></a> Improve Zapier UX by 10x
 			<p><img src="./media/dashboard.png">
 		<th width="50%">
 			<p><a title="Track changes with commit messages"></a> Track changes with commit messages
