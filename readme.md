@@ -29,7 +29,7 @@
 	<tr>
 		<th width="50%">
 			<p><a title="Detailed history of all the commits"></a> Detailed history of all the commits
-			<p><img src="commit-details.png">
+			<p><img src="./media/commit-details.png">
 		<th width="50%">
 			<p><a title="Filter by Folder or Zap"></a> Filter by Folder or Zap
 			<p><img src="./media/folder-search.gif">
@@ -37,9 +37,6 @@
 		<th width="50%">
 			<p><a title="Detailed history of all the commits"></a> Name your zap before publishing
 			<p><img src="./media/name_before_publish.gif">
-		<th width="50%">
-			<p><a title="Filter by Folder or Zap"></a> 
-			<p><img src="https://user-images.githubusercontent.com/1402241/35192861-3f4a1bf6-fecc-11e7-8b9f-35ee019c6cdf.gif">
 </table>
 
 
