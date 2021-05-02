@@ -38,7 +38,7 @@ async function init(): Promise<false | void> {
 		stopOnDomReady: false
 	});
 
-	const handleInputChange = (event: delegate.Event<KeyboardEvent>): void => {
+  const handleInputChange = (event: delegate.Event<KeyboardEvent>): void => {
 		// @ts-expect-error
 		const {value} = event.delegateTarget;
 		filterFolders(value as string);
