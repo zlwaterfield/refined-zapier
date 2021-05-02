@@ -121,10 +121,8 @@ const enableButtons = (): void => {
 
 const handleZapActivated = async (event: delegate.Event<MouseEvent>): Promise<void> => {
   const commitMessageSaved = select('body.commit-message-saved');
-  console.log(commitMessageSaved);
   if (isZapNameSet() && !commitMessageSaved) {
     showModal();
-    console.log('event.stopPropagation();');
     event.stopPropagation();
   }
 };

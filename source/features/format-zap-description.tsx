@@ -24,8 +24,6 @@ const findDescriptionElement = (): HTMLSpanElement | undefined | null => {
 };
 
 const formatDescription = async (): Promise<void> => {
-  console.log('formatDescription');
-
   const zapId = location.pathname.slice(9, location.pathname.length);
   const zapDetails = await fetchZapDetails(zapId);
   const existingDescription = zapDetails.description;
