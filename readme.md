@@ -4,15 +4,48 @@
 
 ## Install (coming soon)
 
-[link-chrome]: https://chrome.google.com/webstore/detail/ 'Version published on Chrome Web Store'
+## Chrome
+
+1. [Download Chrome Extension Zip](https://github.com/zlwaterfield/refined-zapier/releases/download/0.0.1/refined-zapier-0.0.1.zip)
+2. Open the "Extensions" page (chrome://extensions/) in the browser and turn on the "Developer mode".
+3. In Settings > Extensions click "Load unpacked extension" and select the `distribution/` subfolder of this repository.
+<table>
+	<tr>
+		<th width="100%">
+			<p><a title="Enable developer mode"></a> Enable developer mode and Load unpacked extension
+			<p><img src="./media/Chrome-extension-instructions.png">
+</table>
+
+## Highlights
+<table>
+	<tr>
+		<th width="50%">
+			<p><a title="Improve Zapier UX by 10x"></a> Improve Zapier UX by 10x 
+			<p><img src="./media/dashboard.png">
+		<th width="50%">
+			<p><a title="Track changes with commit messages"></a> Track changes with commit messages
+			<p><img src="./media/commit-message.png">
+	<tr>
+		<th width="50%">
+			<p><a title="Detailed history of all the commits"></a> Detailed history of all the commits
+			<p><img src="./media/commit-details.png">
+		<th width="50%">
+			<p><a title="Filter by Folder or Zap"></a> Filter by Folder or Zap
+			<p><img src="./media/folder-search.gif">
+  <tr>
+		<th width="50%">
+			<p><a title="Detailed history of all the commits"></a> Name your zap before publishing
+			<p><img src="./media/name_before_publish.gif">
+</table>
+
+
 
 <!--
-
 ############################
   Descriptions style guide
 ############################
 
-- Starts with: "(Refined GitHub) <verb in third person> ..."
+- Starts with: "(Refined Zapier) <verb in third person> ..."
 - Ends with period (inside link or parens, if present, like this.)
 - Keyboard shortcuts must follow:
 	- "Adds a keyboard shortcut to ...: <kbd>key1</kbd> <kbd>key2</kbd>"
@@ -46,8 +79,11 @@ Thanks for contributing! 🦋🙌
 
 ### Styling
 - [](# "load-styles") 🎨 Load fonts (Poppins)
-- [](# "improved-sidebar-styling") 🎛  [Improve the styling of Zapier sidebar]()
-- [](# "improved-zap-list-styling") 🎛  [Improve the styling of the Zap list]()
+
+- [](# "improved-sidebar-styling") 🎛 [Improve the styling of Zapier sidebar.]()
+- [](# "improved-zap-list-styling") 🎛 [Improve the styling of the Zap list.]()
+- [](# "improved-zap-editor-styling") 🎛 [Improve the styling of the Zap Editor]()
+
 
 <!-- Refer to style guide above. Keep this message between sections. -->
 
