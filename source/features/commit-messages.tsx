@@ -6,77 +6,67 @@ import elementReady from 'element-ready';
 
 import features from '.';
 import './commit-messages.css';
-import * as api from '../helpers/api';
 import {isZapEditor} from '../helpers/page-detect';
 import {isZapNameSet} from '../helpers/is-zap-name-set';
 import {onTurnZapOnToggleSwitchEnabled} from '../events/on-toggle-switch-enabled';
 import {onTurnZapOnButtonClicked} from '../events/on-button-clicked';
+import {fetchZapDetails, fetchCurrentUser, updateZapDescription} from '../helpers/api';
+
+const DESCRIPTION_SPLIT_MESSAGE = '==========Do not edit below this line==========';
 
 const renderModal = (): void => {
 	const element = select('.flow-container__app-bar');
-	console.log('el', element);
 	element?.after(
 		<div id="commit-message-modal" className="commit-message-modal">
 			<div className="commit-message-modal-content">
 				<span className="close" onClick={hideModal}>&times;</span>
-				<h1>Add a message describing your change</h1>
-				<p>This message will help track the change so people know what you did in the future.</p>
-				<p className="logged-in-user">
-					<span>Logged In User:</span>
-					<p className="logged-in-user-email"/>
-				</p>
-				<div>
-					<label>Message</label>
-					<textarea/>
+				<h2>Add a message</h2>
+				<p><b>This message will help track the change so people know what you did in the future.</b></p>
+				<div className="commit-message-wrapper">
+					<label className="form-label" htmlFor="commit-message">Message</label>
+					<textarea className="form-control" id="commit-message" rows={4} placeholder="Updated the email copy"/>
 				</div>
-				<button type="button" onClick={saveCommitMessage}>Publish change</button>
+				<div className="actions-wrapper">
+					<button type="button" className="publish-button" onClick={saveCommitMessage}>Publish with message</button>
+					<button type="button" className="skip-button" onClick={skipCommitMessage}>Skip message and publish</button>
+				</div>
 			</div>
 		</div>
 	);
 };
 
-async function fetchCurrentUser(): Promise<unknown> {
-	const response = await api.v2(
-		'accountsDataQuery',
-		{},
-		`query accountsDataQuery {
-      accounts {
-        id
-        normalizedImageUrl
-        normalizedName
-        __typename
-      }
-      currentUserV2 {
-        id
-        email
-        __typename
-      }
-    }`
-	);
-	return response;
-}
-
-async function updateZapDescription(zapId: string, description: string): Promise<unknown> {
-	const response = await api.v2(
-		'SetZapDescription',
-		{id: zapId, description},
-		`mutation SetZapDescription($id: ID!, $description: String!) {
-      setZapDescription(id: $id, description: $description) {
-        description
-        id
-        __typename
-      }
-    }`
-	);
-	return response;
-}
-
-const saveCommitMessage = async () : Promise<void> => {
-	await updateZapDescription('119978875', 'description');
+const saveCommitMessage = async (): Promise<void> => {
+	// @ts-expect-error
+	const message = select('#commit-message')?.value;
+	await formatZapDescription(message as string);
 	hideModal();
 };
 
-const showModal = () : void => {
+const skipCommitMessage = async (): Promise<void> => {
+	await formatZapDescription('No message');
+	hideModal();
+};
+
+const formatZapDescription = async (message: string): Promise<void> => {
+	const zapId = location.pathname.slice(12, location.pathname.length);
+	const currentUser = await fetchCurrentUser();
+	// @ts-expect-error
+	const {email} = currentUser.currentUserV2;
+	const zapDetails = await fetchZapDetails(zapId);
+	const existingWholeDescription = zapDetails.description;
+	existingWholeDescription.includes(DESCRIPTION_SPLIT_MESSAGE);
+	const [existingDescription, existingCommits] = existingWholeDescription.split(DESCRIPTION_SPLIT_MESSAGE);
+	const description = `${existingDescription}
+${DESCRIPTION_SPLIT_MESSAGE}
+
+Date: ${(new Date()).toString()}
+User: ${email as string}
+Message: ${message}
+${existingCommits || ''}`;
+	await updateZapDescription(zapId, description);
+};
+
+const showModal = (): void => {
 	const modal = select('.commit-message-modal');
 	modal!.style.display = 'block';
 
@@ -84,7 +74,7 @@ const showModal = () : void => {
 	body!.style.overflow = 'hidden';
 };
 
-const hideModal = () : void => {
+const hideModal = (): void => {
 	const modal = select('.commit-message-modal');
 	modal!.style.display = 'none';
 
@@ -93,16 +83,8 @@ const hideModal = () : void => {
 };
 
 const handleZapActivated = async (event: delegate.Event<MouseEvent>): Promise<void> => {
-	console.log(isZapNameSet());
 	if (isZapNameSet()) {
 		showModal();
-		const currentUser = await fetchCurrentUser();
-		const loggedInUserEmailElement = select('.logged-in-user-email');
-		if (loggedInUserEmailElement) {
-			// @ts-expect-error
-			loggedInUserEmailElement.textContent = currentUser.currentUserV2.email;
-		}
-
 		event.stopPropagation();
 	}
 };

@@ -21,6 +21,21 @@
 	position: relative;
 }
 
+.commit-message-wrapper label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.commit-message-wrapper textarea {
+	resize: vertical;
+	overflow: auto;
+	height: auto;
+}
+
+.commit-message-wrapper textarea::placeholder {
+	color: #d7d7d7;
+}
+
 .close {
 	color: #aaa;
 	font-size: 28px;
@@ -35,4 +50,41 @@
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.actions-wrapper {
+	text-align: center;
+}
+
+.publish-button {
+	font-family: Poppins, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0 20px;
+	height: 40px;
+	background-color: #136bf5;
+	color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: 15px;
+}
+
+.publish-button:hover {
+	background-color: #2655bd;
+}
+
+.skip-button {
+	font-family: Poppins, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #136bf5;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.skip-button:hover {
+	text-decoration: underline;
 }

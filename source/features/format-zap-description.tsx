@@ -2,12 +2,14 @@ import marked from 'marked';
 
 import './improved-zap-list-styling.css';
 import select from 'select-dom';
+import delay from 'delay';
 import elementReady from 'element-ready';
 import sanitizeHtml from 'sanitize-html';
 
-import {isZapDetails} from '../helpers/page-detect';
 import features from '.';
-import * as api from '../helpers/api';
+import {isZapDetails} from '../helpers/page-detect';
+import {fetchZapDetails} from '../helpers/api';
+import {onMainWrapperClick} from '../events/on-element-clicked';
 
 marked.setOptions({
 	gfm: true,
@@ -22,43 +24,41 @@ const findDescriptionElement = (): HTMLSpanElement | undefined | null => {
 	});
 };
 
-async function fetchZapDescription(zapId: string): Promise<unknown> {
-	const response = await api.v2(
-		'zapQuery',
-		{zapId},
-		`query zapQuery($zapId: ID!) {
-      zapV2(id: $zapId) {
-        description
-        __typename
-      }
-    }`
-	);
-	return response.zapV2.description;
-}
+const formatDescription = async (): Promise<void> => {
+	console.log('formatDescription');
+
+	const zapId = location.pathname.slice(9, location.pathname.length);
+	const zapDetails = await fetchZapDetails(zapId);
+	const existingDescription = zapDetails.description;
+	if (!existingDescription) {
+		return;
+	}
+
+	const sanitizedExistingDescription = sanitizeHtml(existingDescription);
+	const sanitizedExistingDescriptionWithNewLines = sanitizedExistingDescription.replace(/\r\n|\r|\n|\\n/g, '<br>');
+	const markdownDescription = marked(sanitizedExistingDescriptionWithNewLines);
+
+	const descriptionElement = findDescriptionElement();
+	const descriptionParagraph = descriptionElement?.nextSibling;
+	if (!descriptionParagraph || descriptionParagraph.nodeName !== 'P') {
+		return;
+	}
+
+	// @ts-expect-error
+	descriptionParagraph.innerHTML = markdownDescription;
+};
 
 async function init(): Promise<false | void> {
 	await elementReady('div[class*="DetailItem--rootStyle"]', {
 		stopOnDomReady: false
 	});
 
-	const zapId = location.pathname.slice(9, location.pathname.length - 1);
-	const existingDescription = await fetchZapDescription(zapId);
-	if (!existingDescription) {
-		return;
-	}
+	onMainWrapperClick(async () => {
+		await delay(50); // Add a delay to confirm the change happened
+		void formatDescription();
+	});
 
-	const sanitizedExistingDescription = sanitizeHtml(existingDescription as string);
-	const sanitizedExistingDescriptionWithNewLines = sanitizedExistingDescription.replace(/\r\n|\r|\n|\\n/g, '<br>');
-	const markdownDescription = marked(sanitizedExistingDescriptionWithNewLines);
-
-	const descriptionElement = findDescriptionElement();
-	const descriptionParagraph = descriptionElement?.nextSibling;
-	if (!descriptionParagraph) {
-		return;
-	}
-
-	// @ts-expect-error
-	descriptionParagraph.innerHTML = markdownDescription;
+	void formatDescription();
 }
 
 void features.add(__filebasename, {
