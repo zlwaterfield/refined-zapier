@@ -42,7 +42,6 @@ async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<v
 async function cacheTooltips(): Promise<void> {
     await elementReady('.zap-mini', {'stopOnDomReady': false});
 
-    console.log('Zaps seem to be loaded, try to to pre-warm cache');
     const zapIds = select.all('.zap-mini').map(el => el!.getAttribute('data-zap-id'));
     // Fire API requests to load the necessary data. 
     // These are memoized in session so loads on hover are fast.
