@@ -68,7 +68,7 @@ Thanks for contributing! 🦋🙌
 
 ### Zap List
 - [](# "folder-searching") 🔦 [Folder searching](https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/folder-search.gif)
-- [](# "show-zap-details-on-hover") 🔍 [Details on hover]()
+- [](# "show-zap-details-on-hover") 🔍 [Details on hover](https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/zap-hover-app-list.png)
 
 ### Zap Editor
 - [](# "commit-messages") 💬 [Commit messages](https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/commit-message.png)
