@@ -40,6 +40,10 @@ async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<v
   }
 }
 
+async function handleZapTitleHover(event: delegate.Event<MouseEvent>): Promise<void> {
+    console.log(event);
+}
+
 async function cacheTooltips(): Promise<void> {
   await elementReady('.zap-mini', {stopOnDomReady: false});
 

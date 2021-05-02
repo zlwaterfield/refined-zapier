@@ -6,23 +6,6 @@ interface ZapOverview {
 	stepTitles: string[];
 }
 
-const friendlyNameForApis = new Map<string, string>([
-	// TODO: Add more APIs here.
-	['GoogleMailV2API', 'Gmail'],
-	['GoogleDocsV2API', 'Google Docs'],
-	['GoogleDriveAPI', 'Google Drive'],
-	['GoogleCalendarAPI', 'Google Calendar'],
-	['GoogleSheetsV2API', 'Google Sheets']
-]);
-
-function apiNameToUse(apiName: string): string {
-	if (friendlyNameForApis.has(apiName)) {
-		return friendlyNameForApis.get(apiName)!;
-	}
-
-	return apiName;
-}
-
 export const fetchZapDetails = async (zapId: string): Promise<ZapOverview> => {
   const response = await api.v2(
     'zapQuery',
