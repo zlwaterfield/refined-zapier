@@ -1,12 +1,11 @@
 import marked from 'marked';
-
-import './improved-zap-list-styling.css';
 import select from 'select-dom';
 import delay from 'delay';
 import elementReady from 'element-ready';
 import sanitizeHtml from 'sanitize-html';
 
 import features from '.';
+import './improved-zap-list-styling.css';
 import {isZapDetails} from '../helpers/page-detect';
 import {fetchZapDetails} from '../helpers/api';
 import {onMainWrapperClick} from '../events/on-element-clicked';

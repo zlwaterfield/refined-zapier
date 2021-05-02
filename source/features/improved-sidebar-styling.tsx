@@ -1,5 +1,5 @@
-import './improved-sidebar-styling.css';
 import features from '.';
+import './improved-sidebar-styling.css';
 import {isDashboard, isMyZaps, isZapHistory, isZaps} from '../helpers/page-detect';
 
 async function init(): Promise<false | void> {
