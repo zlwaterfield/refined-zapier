@@ -5,6 +5,7 @@
 ## Install (coming soon)
 
 ## Chrome
+Note: the extention is currently not availabe in the Chrome Web Store as we are waiting to get approved so you must install it manually right now. We will update the documentation once it is approved and live.
 
 1. [Download Chrome Extension Zip](https://github.com/zlwaterfield/refined-zapier/releases/latest/download/refined-zapier.zip)
 2. Unzip the release
