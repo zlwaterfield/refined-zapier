@@ -1,9 +1,9 @@
 import * as api from './index';
 
 interface ZapOverview {
-  description: string;
-  appsUsed: string[];
-  stepTitles: string[];
+	description: string;
+	appsUsed: string[];
+	stepTitles: string[];
 }
 
 export const fetchZapDetails = async (zapId: string): Promise<ZapOverview> => {

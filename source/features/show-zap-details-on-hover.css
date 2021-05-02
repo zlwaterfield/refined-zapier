@@ -26,3 +26,28 @@
 	list-style-type: disc !important;
 	list-style-position: inside !important;
 }
+
+.title-tooltip {
+	position: absolute;
+	padding: 10px 15px !important;
+	top: 95% !important;
+	left: 150px !important;
+	max-width: 300px !important;
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+	background-color: #fff !important;
+	border-radius: 10px !important;
+	z-index: 10 !important;
+	box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%) !important;
+	border: 1px solid #9ca3af;
+}
+
+.title-tooltip.hide-tooltip {
+	display: none !important
+}
+
+.title-tooltip ul {
+	list-style-type: disc !important;
+	list-style-position: inside !important;
+}
