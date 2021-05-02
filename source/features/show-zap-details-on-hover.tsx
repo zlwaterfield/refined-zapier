@@ -19,7 +19,6 @@ async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<v
 	}
 
 	if (event.type === 'mouseover') {
-        console.log(event);
 		const overview = await fetchZapDetails(zapId);
 		const existingTooltip = select(`#icon-tooltip-${zapId}`);
 		if (existingTooltip) {
@@ -36,7 +35,6 @@ async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<v
 			);
 		}
 	} else if (event.type === 'mouseout') {
-        console.log(event);
 		select(`#icon-tooltip-${zapId}`)?.classList.add('hide-tooltip');
 	}
 }
