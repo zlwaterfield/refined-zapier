@@ -1,5 +1,6 @@
 {
   "quiet": true,
+  "space": true,
   "envs": [
     "browser"
   ],

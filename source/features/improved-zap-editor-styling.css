@@ -1,29 +1,29 @@
 .flow-container__editor {
-  background-color: #fff;
+	background-color: #fff;
 }
 
 div[class*='flow-sidebar__beta-timeline'] {
-  width: 1000px;
-  margin: 0 auto;
-  border: 2px solid #e3e9ed;
-  border-radius: 16px;
-  box-sizing: border-box;
-  padding-top: 25px;
-  padding-bottom: 25px;
+	width: 1000px;
+	margin: 0 auto;
+	border: 2px solid #e3e9ed;
+	border-radius: 16px;
+	box-sizing: border-box;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
 div[class*='flow-detail-steps'] {
-  font-family: Poppins, sans-serif !important;
-  padding-right: 25px;
-  padding-left: 25px;
-  position: relative;
-  width: 100%;
+	font-family: Poppins, sans-serif !important;
+	padding-right: 25px;
+	padding-left: 25px;
+	position: relative;
+	width: 100%;
 }
 
 div[class*='css-wra4y2'] {
-  background-color: #fff;
+	background-color: #fff;
 }
 
 button[aria-label='share this zap'] {
-  background-color: #000 !important;
+	background-color: #000 !important;
 }

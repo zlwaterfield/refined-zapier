@@ -1,7 +1,7 @@
 .hide-folder-from-search {
-  display: none !important;
+	display: none !important;
 }
 
 .zap-listings-with-folder-search {
-  grid-template-rows: 50px 1fr !important;
+	grid-template-rows: 50px 1fr !important;
 }
