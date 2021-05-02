@@ -11,7 +11,7 @@ import {onTurnZapOnToggleSwitchEnabled} from '../events/on-toggle-switch-enabled
 import {onTurnZapOnButtonClicked} from '../events/on-button-clicked';
 import {fetchZapDetails, fetchCurrentUser, updateZapDescription} from '../helpers/api';
 
-const DESCRIPTION_SPLIT_MESSAGE = '==========Do not edit below this line==========';
+export const DESCRIPTION_SPLIT_MESSAGE = '==========Do not edit below this line==========';
 
 const renderModal = (): void => {
   const element = select('.flow-container__app-bar');

@@ -18,4 +18,4 @@ export const fetchCurrentUser = async (): Promise<CurrentUser> => {
     }`
   );
   return response.currentUserV2;
-}
+};

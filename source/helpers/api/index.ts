@@ -1,4 +1,4 @@
-import mem from 'mem'
+import mem from 'mem';
 import {JsonObject} from 'type-fest';
 
 export * from './fetch-zap-details';
@@ -27,18 +27,18 @@ export class RefinedZapierAPIError extends Error {
 export const v2 = mem(async (
   operationName: string,
   variables: Object,
-  query: string,
+  query: string
 ): Promise<AnyObject> => {
   if (/^(query )?{/.test(query.trimStart())) {
     throw new TypeError('`query` should only be what’s inside \'query {...}\', like \'user(login: "foo") { name }\', but is \n' + query);
   }
 
-  const graphqlRequest = {operationName: operationName, variables: variables, query: query};
+  const graphqlRequest = {operationName, variables, query};
 
   const response = await fetch(api2, {
     headers: {
       'User-Agent': 'Refined Zapier',
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
     method: 'POST',
     body: JSON.stringify(graphqlRequest)
@@ -64,7 +64,6 @@ export const v2 = mem(async (
   cacheKey: JSON.stringify,
   maxAge: 100
 });
-
 
 export async function getError(apiResponse: JsonObject): Promise<RefinedZapierAPIError> {
   const error = new RefinedZapierAPIError(

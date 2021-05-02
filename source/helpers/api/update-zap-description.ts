@@ -12,4 +12,4 @@ export const updateZapDescription = async (zapId: string, description: string): 
       }
     }`
   );
-}
+};

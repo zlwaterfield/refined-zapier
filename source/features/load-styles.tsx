@@ -8,7 +8,7 @@ async function init(): Promise<void> {
     stopOnDomReady: false
   });
 
-  document.head.append(<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />);
+  document.head.append(<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet"/>);
 }
 
 void features.add(__filebasename, {

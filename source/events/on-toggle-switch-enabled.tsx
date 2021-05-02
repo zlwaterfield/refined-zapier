@@ -15,7 +15,7 @@ function onToggleSwitchEnabled(selector: string, callback: DelegateFieldEvent): 
 }
 
 function isCurrentlyUnchecked(element: HTMLInputElement): boolean {
-  return !!element?.nextElementSibling?.className.includes('unchecked');
+  return Boolean(element?.nextElementSibling?.className.includes('unchecked'));
 }
 
 export function onTurnZapOnToggleSwitchEnabled(callback: DelegateFieldEvent): void {

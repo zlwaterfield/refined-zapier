@@ -29,7 +29,7 @@ const config: Configuration = {
   entry: Object.fromEntries([
     'refined-zapier',
     'background',
-    'options',
+    'options'
   ].map(name => [name, `./source/${name}`])),
   output: {
     path: path.resolve('distribution/build')

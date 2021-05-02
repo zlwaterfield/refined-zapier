@@ -43,7 +43,7 @@ interface InternalRunConfig {
 let log: typeof console.log;
 const {version} = browser.runtime.getManifest();
 
-let logError = (id: FeatureID, error: unknown): void => {
+const logError = (id: FeatureID, error: unknown): void => {
   const message = error instanceof Error ? error.message : String(error);
 
   if (message.includes('token')) {
@@ -75,7 +75,7 @@ let logError = (id: FeatureID, error: unknown): void => {
 
 // eslint-disable-next-line no-async-promise-executor -- Rule assumes we don't want to leave it pending
 const globalReady: Promise<RZPOptions> = new Promise(async resolve => {
-  await elementReady('body', { waitForChildren: false });
+  await elementReady('body', {waitForChildren: false});
 
   if (select.exists('html.refined-zapier')) {
     console.warn(stripIndent(`
