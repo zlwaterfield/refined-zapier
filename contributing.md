@@ -26,7 +26,7 @@ function init() {
 
 void features.add(__filebasename, {
 	include: [
-		pageDetect.isPR // Find which one you need on https://fregante.github.io/github-url-detection/
+		isZaps // Find which one you need on https://github.com/aleixordeig/refined-zapier/blob/main/source/helpers/page-detect.ts
 	],
 	awaitDomReady: false,
 	init
@@ -67,13 +67,13 @@ First clone:
 ```sh
 git clone https://github.com/zlwaterfield/refined-zapier  
 cd refined-zapier
-npm install
+yarn install
 ```
 
 When working on the extension or checking out branches, use this to have it constantly build your changes:
 
 ```sh
-npm run watch # Listen to file changes and automatically rebuild
+yarn watch # Listen to file changes and automatically rebuild
 ```
 
 Then load or reload it into the browser to see the changes.

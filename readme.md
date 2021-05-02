@@ -6,7 +6,7 @@
 
 ## Chrome
 
-1. [Download Chrome Extension Zip](https://on-deck-community.enterprise.slack.com/files/U019MVC9TEW/F020MH820Q3/distribution.zip)
+1. [Download Chrome Extension Zip](https://github.com/zlwaterfield/refined-zapier/releases/download/0.0.1/refined-zapier-0.0.1.zip)
 2. Open the "Extensions" page (chrome://extensions/) in the browser and turn on the "Developer mode".
 3. In Settings > Extensions click "Load unpacked extension" and select the `distribution/` subfolder of this repository.
 <table>
