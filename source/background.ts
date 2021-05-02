@@ -41,9 +41,8 @@ browser.runtime.onInstalled.addListener(async ({reason}) => {
       return;
     }
 
-    // @TODO - make a welcome page
     await browser.tabs.create({
-      url: 'https://github.com/sindresorhus/refined-github/issues/3543'
+      url: 'https://github.com/zlwaterfield/refined-zapier/issues/18'
     });
   }
 

@@ -8,7 +8,7 @@ Suggestions and pull requests are highly encouraged! Have a look at the [open is
 - The extension can be loaded into Chrome or Firefox manually ([See notes below](#loading-into-the-browser))
 - [JSX](https://reactjs.org/docs/introducing-jsx.html) is used to create DOM elements.
 - All the [latest DOM APIs](https://github.com/WebReflection/dom4#features) and JavaScript features are available because the extension only has to work in the latest Chrome and Firefox. 🎉
-- Each JavaScript feature lives in its own file under [`source/features`](https://github.com/sindresorhus/refined-github/tree/main/source/features) and it's imported in [`source/refined-zapier.ts`](https://github.com/zlwaterfield/refined-zapier/blob/main/source/refined-zapier.ts).
+- Each JavaScript feature lives in its own file under [`source/features`](https://github.com/zlwaterfield/refined-zapier/tree/main/source/features) and it's imported in [`source/refined-zapier.ts`](https://github.com/zlwaterfield/refined-zapier/blob/main/source/refined-zapier.ts).
 - See what a feature [looks like]https://github.com/zlwaterfield/refined-zapier/blob/main/source/features/improved-zap-list-styling.tsx).
 
 
