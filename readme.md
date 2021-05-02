@@ -6,12 +6,52 @@
 
 ## Chrome
 
-1. Enable [Chrome Extensions Developer Mode](https://developer.chrome.com/extensions/faq#faq-dev-01) in Chrome.
-2. In Settings > Extensions click "Load unpacked extension" and select the `distribution/` subfolder of this repository.
-
-[link-chrome]: https://chrome.google.com/webstore/detail/ 'Version published on Chrome Web Store'
+1. [Download Chrome Extension Zip](https://on-deck-community.enterprise.slack.com/files/U019MVC9TEW/F020MH820Q3/distribution.zip)
+2. Extract 
+3. Open the "Extensions" page (chrome://extensions/) in the browser and turn on the "Developer mode".
+4. In Settings > Extensions click "Load unpacked extension" and select the `distribution/` subfolder of this repository.
+<table>
+	<tr>
+		<th width="100%">
+			<p><a title="Enable developer mode"></a> Enable developer mode and Load unpacked extension
+			<p><img src="./media/Chrome-extension-instructions.png">
+</table>
 
 <!--
+## Highlights
+<table>
+	<tr>
+		<th width="50%">
+			<p><a title="show-whitespace"></a> Enable developer mode and Load unpacked extension
+			<p><img src="https://camo.githubusercontent.com/52ad903185ee381cf30ed2934d0e7d12d791c920c77131617233ad17303cb35f/68747470733a2f2f692e696d6775722e636f6d2f786463686451612e706e67">
+		<th width="50%">
+			<p><a title="resolve-conflicts"></a> Adds one-click merge conflict fixers
+			<p><img src="https://user-images.githubusercontent.com/1402241/54978791-45906080-4fdc-11e9-8fe1-45374f8ff636.png">
+	<tr>
+		<th width="50%">
+			<p><a title="reactions-avatars"></a> Adds reaction avatars showing <i>who</i> reacted to a comment
+			<p><img src="https://user-images.githubusercontent.com/1402241/34438653-f66535a4-ecda-11e7-9406-2e1258050cfa.png">
+		<th width="50%">
+			<p><a title="wait-for-build"></a> Adds the option to wait for checks when merging a PR
+			<p><img src="https://user-images.githubusercontent.com/1402241/35192861-3f4a1bf6-fecc-11e7-8b9f-35ee019c6cdf.gif">
+	<tr>
+		<th width="50%">
+			<p><a title="linkify-code"></a> Linkifies issue/PR references and URLs in code and conversation titles
+			<p><img src="https://cloud.githubusercontent.com/assets/170270/25370217/61718820-29b3-11e7-89c5-2959eaf8cac8.png">
+		<th width="50%">
+			<p><a title="restore-file"></a> Adds a button to revert all the changes to a file in a PR
+			<p><img src="https://user-images.githubusercontent.com/1402241/62826118-73b7bb00-bbe0-11e9-9449-2dd64c469bb9.gif">
+	<tr>
+		<th width="50%">
+			<p><a title="conversation-activity-filter"></a> Lets you hide every event except comments or unresolved comments in issues and PRs
+			<p><img src="https://user-images.githubusercontent.com/1402241/109592127-5f922200-7ad4-11eb-8dfa-1d80fb28e70e.png">
+		<th width="50%">
+			<p><a title="follow-file-renames"></a> Enhances files’ commit lists navigation to follow file renames
+			<p><img src="https://user-images.githubusercontent.com/1402241/54799957-7306a280-4c9a-11e9-86de-b9764ed93397.png">
+</table>
+
+
+
 
 ############################
   Descriptions style guide
