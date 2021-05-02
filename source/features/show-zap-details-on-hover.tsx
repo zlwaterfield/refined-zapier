@@ -1,14 +1,15 @@
 import React from 'dom-chef';
 import delegate from 'delegate-it';
+import elementReady from 'element-ready';
 import select from 'select-dom';
 
 import features from '.';
 import './show-zap-details-on-hover.css';
 import {isZaps} from '../helpers/page-detect';
-import {onDashboardZapHover} from '../events/on-div-hover';
+import {onDashboardZapIconsHover} from '../events/on-div-hover';
 import { fetchZapDetails } from '../helpers/api';
 
-async function handleZapHover(event: delegate.Event<MouseEvent>): Promise<void> {
+async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<void> {
 	const zapIconsDiv = event.delegateTarget;
 	const zapIconsDivWrapper = zapIconsDiv.parentElement?.parentElement?.parentElement;
 	const zapId = zapIconsDivWrapper!.getAttribute('data-zap-id');
@@ -38,9 +39,19 @@ async function handleZapHover(event: delegate.Event<MouseEvent>): Promise<void> 
 	}
 }
 
+async function cacheTooltips(): Promise<void> {
+    await elementReady('.zap-mini', {'stopOnDomReady': false});
+
+    const zapIds = select.all('.zap-mini').map(el => el!.getAttribute('data-zap-id'));
+    // Fire API requests to load the necessary data. 
+    // These are memoized in session so loads on hover are fast.
+    zapIds.filter(zapId => zapId !== null).map(zapId => fetchZapDetails(zapId!));
+}
+
 async function init(): Promise<false | void> {
-	onDashboardZapHover(handleZapHover);
-	// Pre-cache the hover information
+	onDashboardZapIconsHover(handleZapIconsHover);
+
+    cacheTooltips();
 }
 
 void features.add(__filebasename, {

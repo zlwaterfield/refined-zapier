@@ -11,6 +11,6 @@ function onDivHover(selector: string, callback: DelegateFieldEvent): void {
     });
 }
 
-export function onDashboardZapHover(callback: DelegateFieldEvent): void {
+export function onDashboardZapIconsHover(callback: DelegateFieldEvent): void {
 	onDivHover('.zap-icons', callback);
 }
