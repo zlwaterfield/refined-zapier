@@ -1,5 +1,5 @@
-import './improved-zap-editor-styling.css';
 import features from '.';
+import './improved-zap-editor-styling.css';
 import {isZapEditor} from '../helpers/page-detect';
 
 async function init(): Promise<false | void> {
@@ -7,8 +7,8 @@ async function init(): Promise<false | void> {
 }
 
 void features.add(__filebasename, {
-	include: [
-		isZapEditor
-	],
-	init
+  include: [
+    isZapEditor
+  ],
+  init
 });

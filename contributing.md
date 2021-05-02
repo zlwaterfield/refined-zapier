@@ -21,39 +21,16 @@ import * as pageDetect from 'github-url-detection';
 import features from '.';
 
 function init() {
-	console.log('✨');
+  console.log('✨');
 }
 
 void features.add(__filebasename, {
-	include: [
-		isZaps
-	],
-	awaitDomReady: false,
-	init
+  include: [
+    isZaps
+  ],
+  awaitDomReady: false,
+  init
 });
-```
-
-Here's an example using `feature.add` options:
-
-```ts
-import './improved-sidebar-styling.css';
-import features from '.';
-import {isDashboard, isMyZaps, isZapHistory, isZaps} from '../helpers/page-detect';
-
-async function init(): Promise<false | void> {
-  // This is all done via styling
-}
-
-void features.add(__filebasename, {
-	include: [
-		isZaps,
-		isMyZaps,
-		isDashboard,
-		isZapHistory
-	],
-	init
-});
-
 ```
 
 ## Requirements
@@ -65,7 +42,7 @@ void features.add(__filebasename, {
 First clone:
 
 ```sh
-git clone https://github.com/zlwaterfield/refined-zapier  
+git clone https://github.com/zlwaterfield/refined-zapier
 cd refined-zapier
 yarn install
 ```

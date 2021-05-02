@@ -1,45 +1,29 @@
-
 .flow-container__editor {
-    background-color: white;
+	background-color: #fff;
 }
 
-div[class*='flow-sidebar__beta-timeline']{
-    width: 1000px;
-    margin: 0 auto;
-    border: 2px solid #E3E9ED;
-    border-radius: 16px;
-    box-sizing: border-box;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}  
-
-
-div[class*='flow-detail-steps']{
-    font-family: Poppins, sans-serif !important;
-    padding-right: 25px;
-    padding-left: 25px;
-    position: relative;
-    width: 100%;
+div[class*='flow-sidebar__beta-timeline'] {
+	width: 1000px;
+	margin: 0 auto;
+	border: 2px solid #e3e9ed;
+	border-radius: 16px;
+	box-sizing: border-box;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
+div[class*='flow-detail-steps'] {
+	font-family: Poppins, sans-serif !important;
+	padding-right: 25px;
+	padding-left: 25px;
+	position: relative;
+	width: 100%;
+}
 
 div[class*='css-wra4y2'] {
-    background-color: white;
-} 
-
-
-/* Not solved */
-div[class*='flow-container__app-bar'] > button[aria-label="share this zap"] {
-    background-color: black !important;
+	background-color: #fff;
 }
 
-.button[aria-label="share this zap"]{
-    background-color: black;
+button[aria-label='share this zap'] {
+	background-color: #000 !important;
 }
-
-div[class*='flow-detail-steps'] > span[class*="Text--subtitle800--black"]{
-    font-family: Poppins, sans-serif !important;
-    font-size: 20px !important;
-    font-weight: 700 !important;
-    line-height: 25px  !important;
-} 
