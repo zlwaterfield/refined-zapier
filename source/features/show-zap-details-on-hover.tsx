@@ -6,7 +6,7 @@ import select from 'select-dom';
 import features from '.';
 import './show-zap-details-on-hover.css';
 import {isZaps} from '../helpers/page-detect';
-import {onDashboardZapIconsHover} from '../events/on-div-hover';
+import {onDashboardZapIconsHover, onDashboardZapTitleHover} from '../events/on-div-hover';
 import { fetchZapDetails } from '../helpers/api';
 
 async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<void> {
@@ -26,6 +26,7 @@ async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<v
 		} else {
 			event.delegateTarget.after(
 				<div id={`icon-tooltip-${zapId}`} className="icon-tooltip">
+                    <h3>All apps used</h3>
 					<ul>
 						{overview.appsUsed.map(a => (
 							<li key={a}>{a}</li>
@@ -35,7 +36,7 @@ async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<v
 			);
 		}
 	} else if (event.type === 'mouseout') {
-		select(`#icon-tooltip-${zapId}`)?.classList.add('hide-tooltip');
+		// select(`#icon-tooltip-${zapId}`)?.classList.add('hide-tooltip');
 	}
 }
 
@@ -50,6 +51,7 @@ async function cacheTooltips(): Promise<void> {
 
 async function init(): Promise<false | void> {
 	onDashboardZapIconsHover(handleZapIconsHover);
+    onDashboardZapTitleHover(handleZapTitleHover);
 
     cacheTooltips();
 }

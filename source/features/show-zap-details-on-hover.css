@@ -9,7 +9,8 @@
 	list-style-position: inside !important;
 	top: 100% !important;
 	left: 10px !important;
-	width: 200px !important;
+	min-width: 200px !important;
+	width: auto !important;
 	height: auto !important;
 	overflow: hidden !important;
 	background-color: #fff !important;

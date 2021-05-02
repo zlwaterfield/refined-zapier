@@ -8,7 +8,7 @@ interface ZapOverview {
 
 const friendlyNameForApis = new Map<string, string>([
 	// TODO: Add more APIs here.
-	['GoogleMailV2API', 'GMail'],
+	['GoogleMailV2API', 'Gmail'],
 	['GoogleDocsV2API', 'Google Docs'],
 	['GoogleDriveAPI', 'Google Drive'],
 	['GoogleCalendarAPI', 'Google Calendar'],
