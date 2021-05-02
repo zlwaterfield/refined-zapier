@@ -3,12 +3,6 @@
 > The inspiration and base for this project was take from [Refined Github](https://github.com/sindresorhus/refined-github).
 
 ## Install (coming soon)
-```sh
-# Install dependencies
-yarn  
-# Create chrome extension
-yarn build
-```
 
 ## Chrome
 
