@@ -61,7 +61,8 @@ export const v2 = mem(async (
 
   throw await getError(apiResponse as JsonObject);
 }, {
-  cacheKey: JSON.stringify
+  cacheKey: JSON.stringify,
+  maxAge: 100
 });
 
 
