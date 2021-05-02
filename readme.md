@@ -34,16 +34,20 @@ Thanks for contributing! 🦋🙌
 -->
 
 ### Zap List
-- [](# "folder-searching") 🔦  [Folder searching.]()
-- [](# "show-zap-details-on-hover") 🔍  [Details on hover.]()
+- [](# "folder-searching") 🔦  [Folder searching]()
+- [](# "show-zap-details-on-hover") 🔍  [Details on hover]()
 
 ### Zap Editor
-- [](# "disable-submit-without-zap-name") ✋  [Prevent creating Zaps with no name.]()
+- [](# "commit-messages") ✋  [Commit messages]()
+- [](# "disable-submit-without-zap-name") ✋  [Prevent creating Zaps with no name]()
+
+### Zap Details
+- [](# "format-zap-description") ✋  [Format Zap description]()
 
 ### Styling
 - [](# "load-styles") 🎨 Load fonts (Poppins)
-- [](# "improved-sidebar-styling") 🎛  [Improve the styling of Zapier sidebar.]()
-- [](# "improved-zap-list-styling") 🎛  [Improve the styling of the Zap list.]()
+- [](# "improved-sidebar-styling") 🎛  [Improve the styling of Zapier sidebar]()
+- [](# "improved-zap-list-styling") 🎛  [Improve the styling of the Zap list]()
 
 <!-- Refer to style guide above. Keep this message between sections. -->
 

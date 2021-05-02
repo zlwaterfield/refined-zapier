@@ -18,7 +18,7 @@ interface Window {
 }
 
 declare module 'markdown-wasm/dist/markdown.node.js';
-
+declare module 'marked';
 declare module 'size-plugin';
 
 // Custom UI events specific to RZP

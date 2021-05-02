@@ -8,7 +8,9 @@ import './features/load-styles';
 // Import the `.css` file from the `.tsx` instead.
 
 // CSS-only disableable features
+import './features/commit-messages';
 import './features/disable-submit-without-zap-name';
+import './features/format-zap-description';
 import './features/improved-sidebar-styling';
 import './features/improved-zap-list-styling';
 import './features/folder-searching';
