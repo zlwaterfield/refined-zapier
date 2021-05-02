@@ -21,15 +21,15 @@ import * as pageDetect from 'github-url-detection';
 import features from '.';
 
 function init() {
-	console.log('✨');
+  console.log('✨');
 }
 
 void features.add(__filebasename, {
-	include: [
-		isZaps
-	],
-	awaitDomReady: false,
-	init
+  include: [
+    isZaps
+  ],
+  awaitDomReady: false,
+  init
 });
 ```
 
@@ -42,7 +42,7 @@ void features.add(__filebasename, {
 First clone:
 
 ```sh
-git clone https://github.com/zlwaterfield/refined-zapier  
+git clone https://github.com/zlwaterfield/refined-zapier
 cd refined-zapier
 yarn install
 ```

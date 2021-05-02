@@ -1,48 +1,48 @@
 {
-	"name": "Refined Zapier",
-	"version": "0.0.2",
-	"description": "Simplifies the Zapier interface and adds useful features",
-	"homepage_url": "https://github.com/zlwaterfield/refined-zapier",
-	"manifest_version": 2,
-	"minimum_chrome_version": "88",
-	"permissions": [
-		"storage",
-		"activeTab",
-		"https://zapier.com/*"
-	],
-	"browser_action": {
-		"default_icon": "icon.png"
-	},
-	"optional_permissions": [
-		"*://*/*"
-	],
-	"icons": {
-		"128": "icon.png"
-	},
+  "name": "Refined Zapier",
+  "version": "0.0.2",
+  "description": "Simplifies the Zapier interface and adds useful features",
+  "homepage_url": "https://github.com/zlwaterfield/refined-zapier",
+  "manifest_version": 2,
+  "minimum_chrome_version": "88",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "https://zapier.com/*"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "optional_permissions": [
+    "*://*/*"
+  ],
+  "icons": {
+    "128": "icon.png"
+  },
   "options_ui": {
-		"chrome_style": true,
-		"page": "options.html"
-	},
-	"background": {
-		"scripts": [
-			"build/browser-polyfill.js",
-			"build/background.js"
-		]
-	},
-	"content_scripts": [
-		{
-			"run_at": "document_start",
-			"matches": [
-				"https://zapier.com/*"
-			],
-			"css": [
-				"build/refined-zapier.css"
-			],
-			"js": [
-				"build/browser-polyfill.js",
-				"build/refined-zapier.js"
-			]
-		}
-	],
-	"web_accessible_resources": []
+    "chrome_style": true,
+    "page": "options.html"
+  },
+  "background": {
+    "scripts": [
+      "build/browser-polyfill.js",
+      "build/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://zapier.com/*"
+      ],
+      "css": [
+        "build/refined-zapier.css"
+      ],
+      "js": [
+        "build/browser-polyfill.js",
+        "build/refined-zapier.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": []
 }

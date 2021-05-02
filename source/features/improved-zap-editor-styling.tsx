@@ -7,8 +7,8 @@ async function init(): Promise<false | void> {
 }
 
 void features.add(__filebasename, {
-	include: [
-		isZapEditor
-	],
-	init
+  include: [
+    isZapEditor
+  ],
+  init
 });

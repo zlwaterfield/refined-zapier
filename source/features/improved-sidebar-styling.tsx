@@ -7,11 +7,11 @@ async function init(): Promise<false | void> {
 }
 
 void features.add(__filebasename, {
-	include: [
-		isZaps,
-		isMyZaps,
-		isDashboard,
-		isZapHistory
-	],
-	init
+  include: [
+    isZaps,
+    isMyZaps,
+    isDashboard,
+    isZapHistory
+  ],
+  init
 });

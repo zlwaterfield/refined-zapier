@@ -1,28 +1,28 @@
 .zap-mini.dashboard {
-	position: relative !important;
+  position: relative !important;
 }
 
 .icon-tooltip {
-	position: absolute;
-	padding: 10px 15px !important;
-	top: 95% !important;
-	left: 10px !important;
-	max-width: 300px !important;
-	width: auto !important;
-	height: auto !important;
-	overflow: hidden !important;
-	background-color: #fff !important;
-	border-radius: 10px !important;
-	z-index: 10 !important;
-	box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%) !important;
-	border: 1px solid #9ca3af;
+  position: absolute;
+  padding: 10px 15px !important;
+  top: 95% !important;
+  left: 10px !important;
+  max-width: 300px !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: hidden !important;
+  background-color: #fff !important;
+  border-radius: 10px !important;
+  z-index: 10 !important;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%) !important;
+  border: 1px solid #9ca3af;
 }
 
 .icon-tooltip.hide-tooltip {
-	display: none !important;
+  display: none !important;
 }
 
 .icon-tooltip ul {
-	list-style-type: disc !important;
-	list-style-position: inside !important;
+  list-style-type: disc !important;
+  list-style-position: inside !important;
 }
