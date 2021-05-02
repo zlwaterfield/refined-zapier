@@ -18,8 +18,12 @@ async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<v
     return;
   }
 
+
+  // This is a hack and placed outside the conditional to preserve 
+  // correct ordering of mouseover and mouseout.
+  const overview = await fetchZapDetails(zapId);
+
   if (event.type === 'mouseover') {
-    const overview = await fetchZapDetails(zapId);
     const existingTooltip = select(`#icon-tooltip-${zapId}`);
     if (existingTooltip) {
       existingTooltip.classList.remove('hide-tooltip');
@@ -41,7 +45,44 @@ async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<v
 }
 
 async function handleZapTitleHover(event: delegate.Event<MouseEvent>): Promise<void> {
-    console.log(event);
+    const zapTitleDiv = event.delegateTarget;
+    const zapTitleDivWrapper = zapTitleDiv.parentElement?.parentElement;
+    const zapId = zapTitleDivWrapper!.getAttribute('data-zap-id');
+    if (zapId === null) {
+        console.log('Unexpected missing zapId');
+        return;
+    }
+
+    // This is a hack and placed outside the conditional to preserve 
+    // correct ordering of mouseover and mouseout.
+    const overview = await fetchZapDetails(zapId);
+    const description = getDescriptionForDisplay(overview.description);
+    if (event.type === 'mouseover') {
+        const existingTooltip = select(`#title-tooltip-${zapId}`);
+        if (existingTooltip) {
+            existingTooltip.classList.remove('hide-tooltip');
+        } else {
+            event.delegateTarget.after(
+            <div id={`title-tooltip-${zapId}`} className="title-tooltip">
+                <h3>Description</h3>
+                <ul>
+                    {description}
+                </ul>
+            </div>
+            );
+        }
+    } else if (event.type === 'mouseout') {
+        select(`#title-tooltip-${zapId}`)?.classList.add('hide-tooltip');
+    }
+}
+
+function getDescriptionForDisplay(description: string): string {
+    if (description === null || description.length == 0) {
+        return 'None'
+    }
+    const prefixIndex = description.indexOf('==========Do not edit below this line==========');
+    description = prefixIndex > 0 ? description.substr(0, prefixIndex) : description;
+    return description.length > 0 ? description : 'None';
 }
 
 async function cacheTooltips(): Promise<void> {
