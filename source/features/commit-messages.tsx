@@ -2,6 +2,7 @@ import React from 'dom-chef';
 import select from 'select-dom';
 import delegate from 'delegate-it';
 import elementReady from 'element-ready';
+import delay from 'delay';
 
 import features from '.';
 import './commit-messages.css';
@@ -11,7 +12,7 @@ import {onTurnZapOnToggleSwitchEnabled} from '../events/on-toggle-switch-enabled
 import {onTurnZapOnButtonClicked} from '../events/on-button-clicked';
 import {fetchZapDetails, fetchCurrentUser, updateZapDescription} from '../helpers/api';
 
-export const DESCRIPTION_SPLIT_MESSAGE = '==========Do not edit below this line==========';
+export const DESCRIPTION_SPLIT_MESSAGE = '\n\n==========Do not edit below this line==========\n';
 
 const renderModal = (): void => {
   const element = select('.flow-container__app-bar');
@@ -34,7 +35,9 @@ const renderModal = (): void => {
   );
 };
 
-const simulateClick = (): void => {
+const simulateClick = async (): Promise<void> => {
+  await delay(2000);
+  console.log('Toggle input', select('input[aria-label="On off switch"]'));
   select('input[aria-label="On off switch"]')?.click();
 };
 
@@ -45,7 +48,7 @@ const saveCommitMessage = async (): Promise<void> => {
   await formatZapDescription(message as string);
   hideModal();
   enableButtons();
-  simulateClick();
+  void simulateClick();
 };
 
 const skipCommitMessage = async (): Promise<void> => {
@@ -53,7 +56,7 @@ const skipCommitMessage = async (): Promise<void> => {
   await formatZapDescription('No message');
   hideModal();
   enableButtons();
-  simulateClick();
+  void simulateClick();
 };
 
 const formatZapDescription = async (message: string): Promise<void> => {
@@ -78,7 +81,6 @@ const formatZapDescription = async (message: string): Promise<void> => {
   existingWholeDescription.includes(DESCRIPTION_SPLIT_MESSAGE);
   const [existingDescription, existingCommits] = existingWholeDescription.split(DESCRIPTION_SPLIT_MESSAGE);
   const description = `${existingDescription}${DESCRIPTION_SPLIT_MESSAGE}
-
 Date: ${(new Date()).toString()}
 User: ${email}
 Message: ${message}
