@@ -1,31 +1,31 @@
 div[class*='ZapsListingPage--small-ZapsListingPage'] {
-	border-right: none !important;
+  border-right: none !important;
 }
 
 div[class*='ZapsListingPage--contentStyle'] {
-	border: 2px solid rgb(37 84 111 / 8%) !important;
-	border-radius: 16px !important;
-	padding: 20px 25px !important;
+  border: 2px solid rgb(37 84 111 / 8%) !important;
+  border-radius: 16px !important;
+  padding: 20px 25px !important;
 }
 
 section[class*='ZapsListingPage--headerStyle'] {
-	display: none !important;
+  display: none !important;
 }
 
 .zap-search-section {
-	margin: 0 auto !important;
-	max-width: 1120px !important;
-	margin-bottom: 10px !important;
+  margin: 0 auto !important;
+  max-width: 1120px !important;
+  margin-bottom: 10px !important;
 }
 
 .search-box.zap-search {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .search-box input {
-	background-color: rgb(37 84 111 / 8%) !important;
-	border: none !important;
-	border-radius: 16px !important;
-	padding-top: 15px !important;
-	padding-bottom: 15px !important;
+  background-color: rgb(37 84 111 / 8%) !important;
+  border: none !important;
+  border-radius: 16px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
 }
