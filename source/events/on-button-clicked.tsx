@@ -7,7 +7,3 @@ function onButtonClicked(selector: string, callback: DelegateFieldEvent): void {
     callback(event);
   });
 }
-
-export function onTurnZapOnButtonClicked(callback: DelegateFieldEvent): void {
-  onButtonClicked('#test-sample', callback);
-}

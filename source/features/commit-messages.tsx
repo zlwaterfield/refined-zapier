@@ -9,7 +9,6 @@ import './commit-messages.css';
 import {isZapEditor} from '../helpers/page-detect';
 import {isZapNameSet} from '../helpers/is-zap-name-set';
 import {onTurnZapOnToggleSwitchEnabled} from '../events/on-toggle-switch-enabled';
-import {onTurnZapOnButtonClicked} from '../events/on-button-clicked';
 import {fetchZapDetails, fetchCurrentUser, updateZapDescription} from '../helpers/api';
 
 export const DESCRIPTION_SPLIT_MESSAGE = '\n\n==========Do not edit below this line==========\n';
@@ -136,7 +135,6 @@ async function init(): Promise<false | void> {
 
   renderModal();
   onTurnZapOnToggleSwitchEnabled(handleZapActivated);
-  onTurnZapOnButtonClicked(handleZapActivated);
 }
 
 void features.add(__filebasename, {
