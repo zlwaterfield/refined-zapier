@@ -19,5 +19,5 @@ function isCurrentlyUnchecked(element: HTMLInputElement): boolean {
 }
 
 export function onTurnZapOnToggleSwitchEnabled(callback: DelegateFieldEvent): void {
-	onToggleSwitchEnabled('.css-1jfssyj-ToggleSwitch__input', callback);
+	onToggleSwitchEnabled('input[class*=ToggleSwitch__input]', callback);
 }

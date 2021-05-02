@@ -1,6 +1,10 @@
 import mem from 'mem'
 import {JsonObject} from 'type-fest';
 
+export * from './fetch-zap-details';
+export * from './update-zap-description';
+export * from './fetch-current-user';
+
 interface JsonError {
 	message: string;
 }
