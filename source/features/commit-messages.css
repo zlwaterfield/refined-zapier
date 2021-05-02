@@ -30,6 +30,7 @@
 	resize: vertical;
 	overflow: auto;
 	height: auto;
+	padding: 15px;
 }
 
 .commit-message-wrapper textarea::placeholder {

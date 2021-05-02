@@ -35,24 +35,49 @@ const renderModal = (): void => {
 	);
 };
 
+const simulateClick = (): void => {
+	console.log('simulateClick');
+	select('input[aria-label="On off switch"]')?.click();
+};
+
 const saveCommitMessage = async (): Promise<void> => {
+	disableButtons();
 	// @ts-expect-error
 	const message = select('#commit-message')?.value;
 	await formatZapDescription(message as string);
 	hideModal();
+	enableButtons();
+	simulateClick();
 };
 
 const skipCommitMessage = async (): Promise<void> => {
+	disableButtons();
 	await formatZapDescription('No message');
 	hideModal();
+	enableButtons();
+	simulateClick();
 };
 
 const formatZapDescription = async (message: string): Promise<void> => {
-	const zapId = location.pathname.slice(12, location.pathname.length);
+	// Get ZapId from URL
+	let zapId;
+	if (location.pathname.includes('/nodes')) {
+		const afterIndex = location.pathname.indexOf('/nodes');
+		zapId = location.pathname.slice(12, afterIndex);
+	} else {
+		zapId = location.pathname.slice(12, location.pathname.length);
+	}
+
+	console.log(zapId);
+
+	// Get current user
 	const currentUser = await fetchCurrentUser();
-	// @ts-expect-error
-	const {email} = currentUser.currentUserV2;
+	const {email} = currentUser;
+
+	// Get the Zap details
 	const zapDetails = await fetchZapDetails(zapId);
+
+	// Parse the existing Zap description and build the new one
 	const existingWholeDescription = zapDetails.description;
 	existingWholeDescription.includes(DESCRIPTION_SPLIT_MESSAGE);
 	const [existingDescription, existingCommits] = existingWholeDescription.split(DESCRIPTION_SPLIT_MESSAGE);
@@ -60,10 +85,11 @@ const formatZapDescription = async (message: string): Promise<void> => {
 ${DESCRIPTION_SPLIT_MESSAGE}
 
 Date: ${(new Date()).toString()}
-User: ${email as string}
+User: ${email}
 Message: ${message}
 ${existingCommits || ''}`;
 	await updateZapDescription(zapId, description);
+	select('body')?.classList.add('commit-message-saved');
 };
 
 const showModal = (): void => {
@@ -82,9 +108,28 @@ const hideModal = (): void => {
 	body!.style.overflow = 'auto';
 };
 
+const disableButtons = (): void => {
+	const publishButton = select('button.publish-button');
+	publishButton!.disabled = true;
+
+	const skipButton = select('button.skip-button');
+	skipButton!.disabled = true;
+};
+
+const enableButtons = (): void => {
+	const publishButton = select('button.publish-button');
+	publishButton!.disabled = false;
+
+	const skipButton = select('button.skip-button');
+	skipButton!.disabled = false;
+};
+
 const handleZapActivated = async (event: delegate.Event<MouseEvent>): Promise<void> => {
-	if (isZapNameSet()) {
+	const commitMessageSaved = select('body.commit-message-saved');
+	console.log(commitMessageSaved);
+	if (isZapNameSet() && !commitMessageSaved) {
 		showModal();
+		console.log('event.stopPropagation();');
 		event.stopPropagation();
 	}
 };
