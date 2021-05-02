@@ -26,7 +26,7 @@ function init() {
 
 void features.add(__filebasename, {
 	include: [
-		isZaps // Find which one you need on https://github.com/aleixordeig/refined-zapier/blob/main/source/helpers/page-detect.ts
+		isZaps
 	],
 	awaitDomReady: false,
 	init
