@@ -97,7 +97,8 @@ const config: Configuration = {
 					mangle: false,
 					output: {
 						beautify: true,
-						indent_level: 2
+						indent_level: 2,
+            ascii_only: true
 					}
 				}
 			})
