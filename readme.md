@@ -10,32 +10,32 @@ Note: the extention is currently not availabe in the Chrome Web Store as we are 
 2. Open the "Extensions" page (chrome://extensions/) in the browser and turn on the "Developer mode".
 3. In Settings > Extensions click "Load unpacked extension" and select the `refined-zapier/` subfolder of this repository.
 <table>
-	<tr>
-		<th width="100%">
-			<p><a title="Enable developer mode"></a> Enable developer mode and Load unpacked extension
-			<p><img src="./media/Chrome-extension-instructions.png">
+  <tr>
+    <th width="100%">
+      <p><a title="Enable developer mode"></a> Enable developer mode and Load unpacked extension
+      <p><img src="./media/Chrome-extension-instructions.png">
 </table>
 
 ## Highlights
 <table>
-	<tr>
-		<th width="50%">
-			<p><a title="10x Zapier's UX"></a> 10x Zapier's UX
-			<p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/dashboard.png">
-		<th width="50%">
-			<p><a title="Track changes with commit messages"></a> Track changes with commit messages
-			<p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/commit-message.png">
-	<tr>
-		<th width="50%">
-			<p><a title="Detailed history of all the commits"></a> Detailed history of all the commits
-			<p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/commit-details.png">
-		<th width="50%">
-			<p><a title="Filter by Folder or Zap"></a> Filter by Folder or Zap
-			<p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/folder-search.gif">
   <tr>
-		<th width="50%">
-			<p><a title="Name your zap before publishing"></a> Name your zap before publishing
-			<p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/name_before_publish.gif">
+    <th width="50%">
+      <p><a title="10x Zapier's UX"></a> 10x Zapier's UX
+      <p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/dashboard.png">
+    <th width="50%">
+      <p><a title="Track changes with commit messages"></a> Track changes with commit messages
+      <p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/commit-message.png">
+  <tr>
+    <th width="50%">
+      <p><a title="Detailed history of all the commits"></a> Detailed history of all the commits
+      <p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/commit-details.png">
+    <th width="50%">
+      <p><a title="Filter by Folder or Zap"></a> Filter by Folder or Zap
+      <p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/folder-search.gif">
+  <tr>
+    <th width="50%">
+      <p><a title="Name your zap before publishing"></a> Name your zap before publishing
+      <p><img src="https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/name_before_publish.gif">
 </table>
 
 
@@ -48,8 +48,8 @@ Note: the extention is currently not availabe in the Chrome Web Store as we are 
 - Starts with: "(Refined Zapier) <verb in third person> ..."
 - Ends with period (inside link or parens, if present, like this.)
 - Keyboard shortcuts must follow:
-	- "Adds a keyboard shortcut to ...: <kbd>key1</kbd> <kbd>key2</kbd>"
-	- "Adds keyboard shortcuts to ...: <kbd>a</kbd> and <kbd>alt</kbd> <kbd>a</kbd>"
+  - "Adds a keyboard shortcut to ...: <kbd>key1</kbd> <kbd>key2</kbd>"
+  - "Adds keyboard shortcuts to ...: <kbd>a</kbd> and <kbd>alt</kbd> <kbd>a</kbd>"
 - Use smart apostrophes: ’ instead of '
 - Keep it concise.
 
