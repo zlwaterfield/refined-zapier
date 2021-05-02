@@ -36,7 +36,6 @@ const renderModal = (): void => {
 };
 
 const simulateClick = (): void => {
-	console.log('simulateClick');
 	select('input[aria-label="On off switch"]')?.click();
 };
 
@@ -68,8 +67,6 @@ const formatZapDescription = async (message: string): Promise<void> => {
 		zapId = location.pathname.slice(12, location.pathname.length);
 	}
 
-	console.log(zapId);
-
 	// Get current user
 	const currentUser = await fetchCurrentUser();
 	const {email} = currentUser;
@@ -81,8 +78,7 @@ const formatZapDescription = async (message: string): Promise<void> => {
 	const existingWholeDescription = zapDetails.description;
 	existingWholeDescription.includes(DESCRIPTION_SPLIT_MESSAGE);
 	const [existingDescription, existingCommits] = existingWholeDescription.split(DESCRIPTION_SPLIT_MESSAGE);
-	const description = `${existingDescription}
-${DESCRIPTION_SPLIT_MESSAGE}
+	const description = `${existingDescription}${DESCRIPTION_SPLIT_MESSAGE}
 
 Date: ${(new Date()).toString()}
 User: ${email}
