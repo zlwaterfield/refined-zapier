@@ -94,7 +94,7 @@ const globalReady: Promise<RZPOptions> = new Promise(async resolve => {
   // Options defaults
   const [options, hotfix] = await Promise.all([
     optionsStorage.getAll(),
-    version === '0.0.6' || await cache.get('hotfix') // Ignores the cache when loaded locally
+    version === '0.0.7' || await cache.get('hotfix') // Ignores the cache when loaded locally
   ]);
 
   void checkForHotfixes();
