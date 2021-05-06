@@ -80,7 +80,7 @@ Thanks for contributing! 🦋🙌
 - [](# "format-zap-description") 📝 [Format Zap description](https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/commit-details.png)
 
 ### Styling
-- [](# "load-styles") 🎨 Load fonts (Poppins)
+- [](# "load-styles") 🎨 Load fonts (Poppins) and TailwindCSS
 - [](# "improved-sidebar-styling") 🎛 [Improve the styling of Zapier sidebar.](https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/dashboard.png)
 - [](# "improved-zap-list-styling") 🎛 [Improve the styling of the Zap list.](https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/dashboard.png)
 - [](# "improved-zap-editor-styling") 🎛 [Improve the styling of the Zap Editor](https://raw.githubusercontent.com/zlwaterfield/refined-zapier/main/media/zap-editor.png)

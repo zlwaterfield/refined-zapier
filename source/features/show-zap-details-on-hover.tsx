@@ -28,9 +28,9 @@ async function handleZapIconsHover(event: delegate.Event<MouseEvent>): Promise<v
       existingTooltip.classList.remove('hide-tooltip');
     } else {
       event.delegateTarget.after(
-        <div id={`icon-tooltip-${zapId}`} className="hover-tooltip icon-tooltip">
+        <div id={`icon-tooltip-${zapId}`} className="absolute z-10 w-auto h-auto max-w-xs px-6 py-4 overflow-hidden bg-white border border-gray-300 border-solid rounded-lg shadow-lg hover-tooltip left-2 top-3/4">
           <h3>All apps used</h3>
-          <ul>
+          <ul className="list-disc list-inside">
             {overview.appsUsed.map(a => (
               <li key={a}>{a}</li>
             ))}
@@ -62,7 +62,7 @@ async function handleZapTitleHover(event: delegate.Event<MouseEvent>): Promise<v
       existingTooltip.classList.remove('hide-tooltip');
     } else {
       event.delegateTarget.after(
-        <div id={`title-tooltip-${zapId}`} className="hover-tooltip title-tooltip">
+        <div id={`title-tooltip-${zapId}`} className="absolute z-10 w-auto h-auto max-w-sm px-6 py-4 overflow-hidden bg-white border border-gray-300 border-solid rounded-lg shadow-lg hover-tooltip left-64 top-3/4">
           <h3>Description</h3>
           <p>{description}</p>
         </div>
