@@ -4,7 +4,13 @@
 
 <a href="https://www.producthunt.com/posts/refined-zapier?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-refined-zapier" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=294438&theme=dark" alt="Refined Zapier - Open-source browser extension to improve Zapier's UX | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-## Chrome
+## Install
+
+[link-chrome]: https://chrome.google.com/webstore/detail/refined-zapier/ffabbmokegdgijnjjkmaanijmpaekmoj 'Version published on Chrome Web Store'
+
+[<img src="https://raw.githubusercontent.com/alrra/browser-logos/90fdf03c/src/chrome/chrome.svg" width="48" alt="Chrome" valign="middle">][link-chrome] [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/hlepfoohegkhhmjieoechaddaejaokhf.svg?label=%20">][link-chrome] also compatible with [<img src="https://raw.githubusercontent.com/alrra/browser-logos/90fdf03c/src/edge/edge.svg" width="24" alt="Edge" valign="middle">][link-chrome] [<img src="https://raw.githubusercontent.com/alrra/browser-logos/90fdf03c/src/opera/opera.svg" width="24" alt="Opera" valign="middle">][link-chrome]
+
+## Install manually in Chrome
 Note: the extention is currently not availabe in the Chrome Web Store as we are waiting to get approved so you must install it manually right now. We will update the documentation once it is approved and live.
 
 1. [Download Chrome Extension Zip](https://github.com/zlwaterfield/refined-zapier/releases/latest/download/refined-zapier.zip)
