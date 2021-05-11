@@ -90,10 +90,10 @@ const formatZapDescription = async (message: string): Promise<void> => {
   const zapDetails = await fetchZapDetails(zapId);
 
   // Parse the existing Zap description and build the new one
-  const existingWholeDescription = zapDetails.description;
+  const existingWholeDescription = zapDetails.description || '';
   existingWholeDescription.includes(DESCRIPTION_SPLIT_MESSAGE);
   const [existingDescription, existingCommits] = existingWholeDescription.split(DESCRIPTION_SPLIT_MESSAGE);
-  const description = `${existingDescription}${DESCRIPTION_SPLIT_MESSAGE}
+  const description = `${existingDescription || ''}${DESCRIPTION_SPLIT_MESSAGE}
 Date: ${(new Date()).toString()}
 User: ${email}
 Message: ${message}
